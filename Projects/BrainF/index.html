@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>brainf interpretor!</title>
+            
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link href="index.css" rel="stylesheet" type="text/css"/>
+        <script defer src="./brainfReader.js" type="module"></script>  
+        <script defer src="./buttonsReader.js" type="module"></script>
+</head>
+
+<body>
+        <div class="alertContainer">
+                <input maxlength="1" type="text" placeholder="b/w 0~255" autocomplete="off" />
+                <button>submit</button>
+        </div>
+
+        <div class="mainContainer">
+                <div class="headContainer"></div>
+
+                <div class="bodyContainer">
+                    <div class="button"><div class="command">.</div></div>
+                    <div class="button commaButton"><div class="command">,</div></div>
+                    <div class="button"><div class="command">&ltri;</div></div>
+                    <div class="button"><div class="command">&rtri;</div></div>
+                    <div class="button"><div class="command">+</div></div>
+                    <div class="button"><div class="command">-</div></div>
+                    <div class="button"><div class="command">[</div></div>
+                    <div class="button"><div class="command">]</div></div>
+                    <div class="button"><div class="command">&#128465;</div></div>
+                    <div class="button"><div class="command">c</div></div>
+                </div>
+
+                <div class="footContainer"></div>
+        </div>
+</body>
+
+</html>

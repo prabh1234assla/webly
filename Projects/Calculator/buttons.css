@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Source+Code+Pro&display=swap');
+
+:root{
+    --font : bold 7vh 'PT Sans', sans-serif;
+}
+
+.num{
+    font: var(--font);
+    color: rgb(255, 255, 0);
+}
+
+.cmd{
+    font: var(--font);
+    color: rgb(172, 63, 63)
+}
+
+.cmdMain{
+    font: var(--font);
+    color: rgb(49, 48, 142)
+}
+
+.clear{
+    grid-column: 1/ span 2;
+    grid-row: 1;
+}
+
+.multiply{
+    grid-column: 4/ span 2;
+    grid-row: 2;
+}
+
+.plus{
+    grid-column: 4/ span 2;
+    grid-row: 4;
+}
+
+.equal{
+    grid-column: 4/ span 2;
+    grid-row: 5;
+}
+
+
+._inputScreen{
+    background-color: aliceblue;
+    height: 20.687vh;
+    border-radius: 0.8vmax 0.8vmax 0.2vmax 0.2vmax;
+    background-color: rgb(168, 239, 168);
+
+    font: 3em red monospace;
+}
+
+._outputScreen{
+    background-color: rgb(168, 239, 168);
+    height: 10.094vh;
+    border-radius: 0.2vmax;
+
+    font: 1em red monospace;
+}

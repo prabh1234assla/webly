@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    overflow: hidden;
+}
+
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    padding: 0.5vh 0.5vw;
+    background-color: #0E0B16;
+
+    display: grid;
+    grid-template: [row-start-main] repeat(50, 1.49vh [row-main]) / [column-start-main] repeat(50, 1.49vw [column-main]);
+    gap: 0.5vh 0.5vw;
+    place-items: center;
+}
+
+.dots{
+    height: 1.5vh;
+    width: 1.5vw;
+    background-color: rgba(161, 57, 202);
+    border-radius: 0.4vh;
+    transition: transform 200ms ease-in-out;
+    animation: dotRotate 2s linear infinite;
+}
+
+.dotsies{
+    height: 0.4vh;
+    width: 150vw;
+    background-color: rgb(255, 196, 0);
+    border-radius: 1vh;
+    transition: transform 200ms ease-in-out;
+    animation: dotsiesRotate 4s linear infinite;
+}
+
+@keyframes dotsiesRotate{
+    to{
+        transform: rotate(-1turn);
+    }
+}
+
+.navBar{
+    position: fixed;
+    height: 5vh;
+    width: 80vw;
+    left: 10vw;
+    top: 3vh;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(4, auto [col]) ;
+    grid-template-rows: repeat(4, 1.67vh [row]);
+    column-gap: 0.3vh;
+}
+
+.navItem{
+    width: 18vw;
+    height: 5vh;
+    background-color: #E7DFDD;
+    border-radius: 3vh;
+    font-family: 'Berkshire Swash', cursive;
+    color: #4717F6;
+    font-size: 5vh;
+    left: 6vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.navItem > div{
+    position: relative;
+    top: -0.45vh;
+}

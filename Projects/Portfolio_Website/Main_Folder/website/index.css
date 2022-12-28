@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    overflow: hidden;
+}
+
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0E0B16;
+
+    display: grid;
+    grid-template-columns: repeat(100, auto [col]) ;
+    grid-template-rows: repeat(100, 1.67vh [row]);
+    column-gap: 0.3vh;
+}
+
+.dots{
+    height: 1.03vh;
+    width: 1.03vh;
+    background-color: #A239CA;
+    border-radius: 0.3vh;
+    transition: transform 200ms ease-in-out;
+    animation: dotRotate 2s linear infinite;
+}
+
+.dotsies{
+    height: 1.03vh;
+    width: 1.03vh;
+    background-color: #4717F6;
+    border-radius: 0.15vh;
+    transition: transform 200ms ease-in-out;
+    animation: dotsiesRotate 2s linear infinite;
+}
+
+@keyframes dotsiesRotate{
+    from{
+        transform: scale(2);
+    }
+    to{
+        transform: scale(2) rotate(1turn);
+    }
+}
+
+.navBar{
+    position: fixed;
+    height: 5vh;
+    width: 80vw;
+    left: 10vw;
+    top: 3vh;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(4, auto [col]) ;
+    grid-template-rows: repeat(4, 1.67vh [row]);
+    column-gap: 0.3vh;
+}
+
+.navItem{
+    width: 18vw;
+    height: 5vh;
+    background-color: #E7DFDD;
+    border-radius: 3vh;
+    font-family: 'Berkshire Swash', cursive;
+    color: #4717F6;
+    font-size: 5vh;
+    left: 6vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.navItem > div{
+    position: relative;
+    top: -0.45vh;
+}

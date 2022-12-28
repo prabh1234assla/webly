@@ -1,0 +1,52 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    user-select: none;
+}
+
+._main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(73, 84, 86);
+
+    display: grid;
+    grid-template: [_main-start-row-line] 3vh [_main-first-row-line] 94vh [_main-second-row-line] 3vh [_main-end-row-line] /  [_main-start-col-line] 25vw [_main-first-col-line] 50vw [_main-second-col-line] 25vw [_main-end-col-line];
+}
+
+._calcJS{
+    background-color: rgb(106, 173, 118);
+    border: 0.5vmax dotted rgb(106, 173, 118);
+    background-clip: content-box;
+    border-radius: 1.5vmax;
+    grid-area: _main-first-row-line / _main-first-col-line / _main-second-row-line / _main-second-col-line;
+
+    display: grid;
+    grid-template: [_component-start-row] 0.213fr 0.106fr 0.681fr [_component-end-row] / [_component-start-column] 1fr [_component-end-column];
+}
+
+._component{
+    padding: 0.2vmax;
+}
+
+._buttonsContainer{
+    display: grid;
+    grid-template: [_buttonsContainer-row-start] 1fr 1fr 1fr 1fr 1fr [_buttonsContainer-row-end] / [_buttonsContainer-column-start] 1fr 1fr 1fr 1fr 1fr [_buttonsContainer-column-end];
+    place-items: center stretch;
+}
+
+.button{
+    height: min-content;
+    /* width: 13vh; */
+    text-align: center;
+    border: 0.15vmax solid rgb(16, 88, 9);
+    border-radius: 0.4vmax;
+}
+
+.button:hover{
+    background-color: rgba(73, 84, 86, 0.644);
+    border: 0.15vmax solid rgb(0, 0, 0);
+}
+
+.button:active{
+    scale: 0.8;
+}

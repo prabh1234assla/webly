@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    user-select: none;
+}
+
+body{
+    background-color: rgb(81, 80, 85);
+    overflow: hidden;
+}
+
+#clockSVG{
+    height: 35vmax;
+    width: 35vmax;
+    margin: 4vh auto;
+
+}
+
+#seconds, #minutes{
+    transform-origin: 371.159px 372.303px;
+}
+
+.menu{
+    position: fixed;
+    height: fit-content;
+    width: fit-content;
+    bottom: 0%;
+    left: 0%;
+}
+
+button{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.2vmax;
+    text-align: center;
+    background-color: transparent;
+    border: 0.2vmax solid rgb(192, 129, 124);
+    border-radius: 0.3vmax;
+    font: 2vmax 'Pacifico', cursive;
+    color: rgb(140, 170, 240);
+}
+
+button:hover{
+    background-color: rgb(57, 57, 57);
+}
+
+button:active{
+    scale: 0.9;
+}
+
+.info{
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.2vmax;
+    text-align: center;
+    background-color: rgb(57, 57, 57);
+    border: 0.2vmax solid rgb(140, 170, 240);
+    border-radius: 0.4vmax;
+    font: 2vmax 'Pacifico', cursive;
+    color: rgb(211, 220, 162);
+}

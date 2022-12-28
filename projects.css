@@ -1,0 +1,95 @@
+#Projects{
+    color: rgb(54, 52, 52);
+    font-family: monospace;
+    user-select: none;
+}
+
+#Projects section{
+    margin: 0.5em 0em;
+    background-color: rgb(131, 12, 12, 0.8);
+    padding-bottom: 0.3em;
+    border-radius: 1em;
+    overflow: auto;
+    background-position: 50% 50%;
+    background-size: 5%;
+    background-image: url("./backgroundImages/piscesLOGO.svg");
+    background-repeat: space;
+}
+
+#Projects section:hover{
+    background-color: rgb(84, 35, 113, 0.8);
+}
+
+#Projects section h1{
+    color: rgb(240, 162, 134);
+    border-bottom: 0.2em solid black;
+    padding: 0.2em;
+    margin: 0.2em;
+}
+
+#Projects section:hover > h1{
+    background-color: rgb(54, 52, 52);
+    border-radius: 50em;
+    border-bottom-color: transparent;
+    color: rgb(247, 181, 244);
+    background-image: url("./backgroundImages/aquariusLOGO.svg");
+    background-size: 8%;
+    background-repeat: space;
+    background-position: 50% 50%;
+}
+
+#Projects section h5{
+    background-color: rgb(241, 175, 88, 0.8);
+    border-radius: 2em;
+    padding: 0.55em;
+    margin: 0.2em;
+}
+
+#Projects section h5 ul{
+    list-style: none;
+}
+
+#Projects section h6{
+    background-color: rgb(255, 133, 133);
+    text-align: center;
+    padding: 0.2em;
+    margin: 0em 2em;
+    border-radius: 2em;
+}
+
+#Projects section:hover > h6{
+    margin: 0em 16em;
+    transition: margin 1s;
+}
+
+#Projects section a{
+    font-size: 2em;
+    text-decoration: none;
+    display: none;
+    padding: 0.05em 0.15em;
+    background-color: brown;
+    border-radius: 0.5em;
+    margin: 0.05em;
+    float: right;
+    border: 0.1em dotted transparent;
+    background-clip: padding-box;
+}
+
+#Projects section a:hover{
+    border-color: coral;
+}
+
+#Projects section a:active{
+    border-color: yellow;
+}
+
+#Projects section:hover a{
+    display: inline-block;
+}
+
+@media (max-width: 900px){
+    #Projects section:hover > h6{
+        margin: 0em 5em;
+        transition: margin 1s;
+    }
+}

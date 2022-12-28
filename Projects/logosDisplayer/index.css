@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    overflow: hidden;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 0.5vh 1vh;
+    
+    background-color: black;
+    display: grid;
+    grid-template-columns: [col-start] repeat(39, 2vw [col]) ;
+    grid-template-rows: [row-end] repeat(39, 2vh [row]);
+    column-gap: 0.55vw;
+    row-gap: 0.55vh;
+}
+
+.dot{
+    height: 2vh;
+    width: 1vw;
+    border-radius: 50%;
+    user-select: none;
+    outline: 1px dotted rgba(255, 147, 58, 0.4);
+    outline-offset: 7px;
+    background-clip: padding-box;
+}

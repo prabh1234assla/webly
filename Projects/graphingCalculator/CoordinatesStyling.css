@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root{
+    --font: bolder 3vh 'Source Code Pro', monospace;
+    --buttonBorderRadius: 100vh;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    user-select: none;
+}
+
+.mainContainer{
+    background-color: rgb(32, 32, 32);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+
+    display: flex;
+    place-items: center;
+    place-content: center;
+    flex-wrap: nowrap;
+}
+
+.graphContainer{
+    position: fixed;
+    height: 0.2vh;
+    width: 0.2vh;
+    top: 50.1vh;
+    left: 50vw;
+    border-radius: 50%;
+    outline: 3vh solid rgba(62, 96, 181, 0.3);
+
+    animation: highlightGraphContainer 2s linear infinite alternate;
+}
+
+.vertical{
+    position: fixed;
+    left: 50vw;
+
+    height: 99vh;
+    outline: 0.15vw solid rgba(62, 96, 181, 1);
+    width: 0.2vw;
+    border-radius: 100vh;
+}
+
+.horizontal{
+    position: fixed;
+    top: 50vh;
+
+    height: 0.2vw;
+    outline: 0.15vw solid rgba(62, 96, 181, 1);
+    width: 99.8vw;
+    border-radius: 100vh;
+}
+
+.point{
+    margin-top: -1px;
+    position: relative;
+    border-radius: 50%;
+    transition: top 6s linear 200ms, left 6s linear 200ms, height 6s linear 200ms, width 6s linear 200ms;
+    z-index: 1;
+}
+
+.message{
+    position: fixed;
+    right: 2vh;
+    bottom: 2vh;
+    height: fit-content;
+    width: fit-content;
+    font: var(--font);
+    font-size: 8vh;
+    padding: 0vh 0.6vh;
+    border-radius: var(--buttonBorderRadius);
+    background-color: rgba(62, 96, 181, 0.4);
+    color: rgb(60, 103, 213);
+}
+
+@keyframes highlightGraphContainer{
+    to{
+        box-shadow: 0px 0px 2vh 3.2vh rgb(181, 92, 121);
+    }
+}

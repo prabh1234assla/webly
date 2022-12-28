@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="282.43mm"
+   width="306.63mm"
+   version="1.1"
+   viewBox="0 0 1086.4693 1000.731"
+   id="svg6"
+   sodipodi:docname="ariesLOGO.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.37144529"
+     inkscape:cx="531.70684"
+     inkscape:cy="550.55214"
+     inkscape:window-width="1920"
+     inkscape:window-height="1003"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <g
+     transform="matrix(0.96416713,0,0,0.96976332,-11.110117,2363.784)"
+     id="g4"
+     style="fill:none;stroke:#ffffff;stroke-width:29.31483829;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;opacity:0.3">
+    <path
+       d="m 285.7,-2415.7 c 113.64,-9.9375 226.9,55.2 278.8,155.99 4.05,3.875 3.5125,12.988 10.188,13.162 22.738,-41.088 50.425,-80.688 88.275,-109.35 110.91,-88.575 290.98,-81.525 387.52,25.262 49.175,49.512 74.275,120.82 70.512,190.24 -4.075,58.088 -29.9,114.19 -71.212,155.2 -1.5875,0.5125 -4.8875,2.0375 -3.425,-1.0125 12.475,-43.175 18.962,-89.062 10.9,-133.66 -8.95,-52.038 -38.225,-103.12 -81.812,-132.02 -78.412,-54.625 -198.49,-40.075 -259.51,33.95 -33.162,40.075 -54.1,88.825 -67.838,138.56 -17.2,220.81 -7.35,443.61 21.825,663.09 -63.562,-0.525 -127.24,0.6125 -190.72,-0.55 27.562,-208.18 40.862,-419.35 29.4,-629.19 -14.912,-62.412 -37.05,-125.24 -79.012,-174.92 -33.025,-39.25 -83.388,-61.362 -134.3,-63.175 -62.788,-7.9625 -124.15,26.862 -159.08,77.7 -46.312,64.638 -55.025,151.04 -32.512,226.29 -33.512,-32.7 -55.225,-76.262 -64.212,-121.96 -19.863,-101.28 26.1,-211.9 112.14,-268.89 39.175,-27.425 86.4,-42.362 134.08,-44.7 z"
+       fill="#de0101"
+       id="path2"
+       style="fill:none;stroke:#ffffff;stroke-width:29.31483829;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+  </g>
+</svg>

@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+:root{
+    --size: 40vh;
+    --space: 2vh;
+    --var11: calc(var(--size) - 9 * var(--space));
+    --var9: calc(var(--size) - var(--var11));
+    --var10: calc(var(--size) / 2);
+    --varpoint5: calc(var(--space) / 2);
+    --var1: 1vh;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.cube{
+    height: var(--size);
+    width: var(--size);
+    
+    transform-style: preserve-3d;
+    animation: rotateCube 16s ease-in-out infinite;
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+.side{
+    height: calc(var(--size) - 2*var(--space));
+    width: calc(var(--size) - 2*var(--space));
+    top: var(--space);
+    left: var(--space);
+    position: relative;
+    
+    transform-style: inherit;
+    border-radius: 4vh;
+    background-clip: padding-box;
+    backdrop-filter: blur(30px);
+    background-color: rgba(125, 80, 21, 0.568);
+    border: 1vh double rgb(247, 221, 171);
+    outline: 1vh double rgb(255, 255, 255);
+    outline-offset: 2vh;
+    animation: outlineAnimation 3s ease-in-out infinite alternate;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+@keyframes outlineAnimation {
+    to{
+        outline-offset: 28vh;
+        outline-style: solid;
+        outline-color: wheat;
+    }
+}
+
+img{
+    height: 36vh;
+    width: 18vw;
+}
+
+.side:hover img{
+    scale: 2;
+}
+
+.leftSide{
+    transform: rotateY(-90deg) translateZ(calc(var(--var11) - var(--var1))) translateY(-2vh);
+}
+
+.rightSide{
+    transform: rotateY(90deg) translateY(calc(-1 * var(--size))) translateZ(calc(var(--var9) - var(--var1)));
+}
+
+.upSide{
+    transform: rotateX(90deg) translateX(calc(-1 * var(--space))) translateZ(calc(3 * var(--var10) - var(--var1)));
+}
+
+.downSide{
+    transform: rotateX(-90deg) translateX(calc(-1 * var(--space))) translateZ(calc(-3 * var(--size) - var(--var9) + 3 * var(--var1)));
+}
+
+.towardsFace{
+    transform: translateX(calc(-1 * var(--space))) translateY(calc(-4 * var(--size) + var(--space) + 4 * var(--var1))) translateZ(calc(var(--var10) - var(--var1)));
+}
+
+.awayFromFace{
+    transform: rotateY(-180deg) translateX(var(--space)) translateY(calc(-5 * var(--size) + var(--space) + 6 * var(--var1))) translateZ(calc(var(--var9) + var(--varpoint5)));
+}
+
+@keyframes rotateCube{
+    17%{
+        transform: rotate3d(1, 0, 0, 90deg);
+    }
+
+    34%{
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+
+    51%{
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+
+    68%{
+        transform: rotate3d(0, 1, 0, 270deg);
+    }
+
+    85%{
+        transform: rotate3d(1, 0, 0, 270deg);
+    }
+
+    to{
+        transform: rotate3d(1, 0, 0, 360deg);
+    }
+}
+
+.lefties > .side{
+    background-color: rgb(255, 218, 185, 0.6);
+    outline-color: rgb(221, 160, 221);
+    animation: outlineAnimationLR 3s ease-in-out infinite alternate;
+    border-color: transparent;
+    font-family: 'Berkshire Swash', cursive;
+    color: purple;
+    font-size: 20vh;
+}
+
+.righties > .side{
+    background-color: rgb(221, 160, 221, 0.6);
+    outline-color: rgb(255, 218, 185);
+    animation: outlineAnimationLR 3s ease-in-out infinite alternate;
+    border-color: transparent;
+    font-family: 'Berkshire Swash', cursive;
+    color: rgb(120, 68, 16);
+    font-size: 20vh;
+}
+
+@keyframes outlineAnimationLR {
+    to{
+        outline-offset: 40vh;
+        outline-style: solid;
+        outline-color: orange;
+    }
+}
+
+.lefties > :is(.downSide, .upSide) {
+    background-color: purple;
+    color: rgba(254, 190, 135, 0.6);
+}
+
+.righties > :is(.downSide, .upSide) {
+    background-color: rgb(120, 68, 16);
+    color: rgb(221, 160, 221, 0.6);
+}

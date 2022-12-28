@@ -1,0 +1,39 @@
+#project1:hover{
+    background-image: url("./backgroundImages/ariesLOGO.svg");
+}
+
+#project2:hover{
+    background-image: url("./backgroundImages/taurusLOGO.svg");
+}
+
+#project3:hover{
+    background-image: url("./backgroundImages/geminiLOGO.svg");
+}
+
+#project4:hover{
+    background-image: url("./backgroundImages/cancerLOGO.svg");
+}
+
+#project5:hover{
+    background-image: url("./backgroundImages/leoLOGO.svg");
+}
+
+#project6:hover{
+    background-image: url("./backgroundImages/virgoLOGO.svg");
+}
+
+#project7:hover{
+    background-image: url("./backgroundImages/libraLOGO.svg");
+}
+
+#project8:hover{
+    background-image: url("./backgroundImages/scorpioLOGO.svg");
+}
+
+#project9:hover{
+    background-image: url("./backgroundImages/sagittariusLOGO.svg");
+}
+
+#project10:hover{
+    background-image: url("./backgroundImages/capricornLOGO.svg");
+}

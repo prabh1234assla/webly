@@ -1,0 +1,36 @@
+#Experience {
+    display: none;
+    color: wheat;
+    font-family: 'Exo 2', sans-serif;;
+}
+
+#Experience #Industry section{
+    padding: 0.2em;
+    margin: 0.6em;
+    border-left: 0.3rem double burlywood;
+    border-bottom: 0.1em solid burlywood;
+    overflow: auto;
+}
+
+#Experience #Industry section h1{
+    color: rgb(142, 22, 22);
+}
+
+#Experience #Industry section h1:hover{
+    color: rgb(250, 165, 165);
+}
+
+#Experience #Industry section img{
+    width: 4%;
+    border-radius: 50%;
+    padding: 0.2em;
+    background-color: white;
+    float: right;
+}
+
+#Experience #Industry section img:hover{
+    transition: padding 200ms ease-in-out;
+    padding: 0.8em;
+    outline: 0.2em dotted orange;
+    outline-offset: 1em;
+}

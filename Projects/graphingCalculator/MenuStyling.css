@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root{
+    --font: bolder 3vh 'Source Code Pro', monospace;
+    --buttonHt: 5.8vh;
+    --buttonWd: 19vw;
+    --buttonBorderRadius: 100vh;
+    --initialBorder: 0.5vh solid transparent;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    user-select: none;
+}
+
+.menu{
+    top: 1vh;
+    left: 1vh;
+    height: 8vh;
+    width: 8vh;
+    position: fixed;
+
+    display: flex;
+    place-items: center;
+    place-content: center;
+    flex-wrap: nowrap;
+}
+
+.material-symbols-outlined{
+    color: rgba(62, 96, 181, 1);
+    font-size: 6vh;
+    padding: 1vh;
+    border: 0.5vh solid transparent;
+    border-radius: 50%;
+
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 40;
+}
+
+.material-symbols-outlined:hover{
+    border: 0.5vh solid rgba(62, 96, 181, 1);
+}
+
+.material-symbols-outlined:active{
+    border: 0.5vh solid rgba(62, 96, 181, 1);
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 40;
+}
+
+.choices{
+    height: 87vh;
+    width: 60vw;
+    top: 6.5vh;
+    left: 20vw;
+    overflow: visible;
+    border-radius: 2vh;
+    padding: 1vh;
+
+    position: fixed;
+
+    display: none;
+    grid-template-rows: [start-row] 41vh [row-one] 35vh [row-two] 7vh [end-row];
+    grid-template-columns: [start-column] 60vw [end-column];
+    place-items: stretch;
+    place-content: center;
+    row-gap: 1vh;
+}
+
+.fnOptions{
+    display: grid;
+    grid-template-rows: [row-start-fnOptions] repeat(3, 5vh [row-fnOptions]);
+    grid-template-columns: [column-start-fnOptions] repeat(3, 17.4vw [column-fnOptions]);
+    place-items: stretch;
+    place-content: center;
+    column-gap: 1.4vw;
+    row-gap: 13vh;
+    padding: 0vh 2.5vw;
+
+    border: 0.8vh double white;
+    border-radius: 3vw;
+}
+
+/* positioning fnOptions elements now ~ */
+
+.box11{
+    grid-column: 1 / span 3;
+
+    font: var(--font);
+    border-radius: var(--buttonBorderRadius);
+    border: var(--initialBorder);
+
+    color: rgb(101, 52, 104);
+    outline: 0px;
+    background-color: rgb(175, 108, 178);
+}
+
+.box12{
+    background-color: rgb(56, 138, 210);
+    border: 0.5vh solid rgb(230, 160, 234);
+    background-clip: content-box;
+    border-radius: 0.8vh;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box13{
+    background-color: rgb(56, 138, 210);
+    border: 0.5vh solid rgb(230, 160, 234);
+    background-clip: content-box;
+    border-radius: 0.8vh;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box14{
+    background-color: rgb(56, 138, 210);
+    border: 0.5vh solid rgb(230, 160, 234);
+    background-clip: content-box;
+    border-radius: 0.8vh;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box15{
+    grid-column: 2;
+    background-color: rgb(56, 138, 210);
+    border: 0.5vh solid rgb(230, 160, 234);
+    background-clip: content-box;
+    border-radius: 0.8vh;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.CustomizingOptions{
+    display: grid;
+    grid-template-rows: [row-start-CustomizingOptions] repeat(5, 5.8vh [row-CustomizingOptions]);
+    grid-template-columns: [column-start-CustomizingOptions] repeat(3, 17.4vw [column-CustomizingOptions]);
+    place-items: stretch;
+    column-gap: 1.4vw;
+    row-gap: 1.5vh;
+    padding: 0vh 2.5vw;
+
+    border: 0.8vh double white;
+    border-radius: 3vw;
+}
+
+/* positioning CustomizingOptions elements now ~ */
+
+.box21{
+    grid-column: 1/span 3;
+    grid-row: 3;
+}
+
+.box22{
+    grid-column: 1/span 3;
+    grid-row: 4;
+}
+
+.box23{
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.box24{
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.box25{
+    grid-column: 3;
+    grid-row: 5;
+}
+
+
+
+
+.submissionOptions{
+    display: grid;
+    grid-template-rows: [row-start-submissionOptions] 7vh [row-submissionOptions] ;
+    grid-template-columns: [column-start-submissionOptions] repeat(3, 19vw [column-submissionOptions]);
+    place-items: stretch;
+    place-content: center;
+    column-gap: 1.5vw;
+
+}
+
+/* positioning submissionOptions elements now ~ */
+
+.submitButton{
+    grid-column: 2;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.input{
+    font: var(--font);
+    border-radius: var(--buttonBorderRadius);
+    border: var(--initialBorder);
+
+    color: rgb(49, 68, 116);
+    caret-color: rgb(49, 68, 116);
+    outline: 0px;
+    background-color: rgb(166, 185, 233);
+}
+
+.input:hover{
+    border: 0.5vh solid rgb(49, 68, 116);
+}
+
+.input:focus-within{
+    box-shadow: 0vh 0vh 0.5vh 0.5vh rgb(96, 119, 176);
+}
+
+
+
+
+.submit{
+    height: var(--buttonHt);
+    width: var(--buttonWd);
+    font: var(--font);
+    border-radius: var(--buttonBorderRadius);
+    border: var(--initialBorder);
+
+    color: rgb(101, 52, 104);
+    outline: 0px;
+    background-color: rgb(175, 108, 178);
+}
+
+.submit:hover{
+    border: 0.5vh solid rgb(151, 59, 132);
+}
+
+.submit:focus-within{
+    box-shadow: 0vh 0vh 0.5vh 0.5vh rgb(175, 108, 178);
+}
+
+
+
+/* '.select' styling */
+
+.select{
+    padding: 0vh 1vw;
+    font: var(--font);
+    border-radius: var(--buttonBorderRadius);
+    border: var(--initialBorder);
+    color: rgb(49, 68, 116);
+    background-color: rgb(166, 185, 233);
+}
+
+.select:hover{
+    border: 0.5vh solid rgba(62, 96, 181, 1);
+}
+
+/* '.lisOfOptions' styling */
+
+.listOfOptions1{
+    border: 0.5vh dotted rgb(248, 188, 251);
+    border-radius: 2vh;
+    padding: 0.5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.listOfOptions2{
+    border: 0.5vh dotted rgb(248, 188, 251);
+    border-radius: 2vh;
+    padding: 0.5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.listOfOptions3{
+    border: 0.5vh dotted rgb(248, 188, 251);
+    border-radius: 2vh;
+    padding: 0.5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.listOfOptions4{
+    border: 0.5vh dotted rgb(248, 188, 251);
+    border-radius: 2vh;
+    padding: 0.5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* '.option' styling */
+
+.option{
+    height: min-content;
+    width: min-content;
+    font: var(--font);
+    border: var(--initialBorder);
+    border-radius: 1vh;
+    margin: 0.2vh;
+
+    margin-top: calc(-1*min-content);
+
+    background-color: rgb(175, 108, 178);
+
+    color: rgb(101, 52, 104);
+    transition: margin-top 1s linear;
+    display: none;
+}
+
+.option:hover{
+    border: 0.5vh solid rgb(101, 52, 104);
+}
+
+.option:active{
+    box-shadow: 0vh 0vh 0.5vh 0.5vh rgb(175, 108, 178);
+}
+
+.pointsNumber, .pointSize, .stepSize{
+    font-size: 2vh;
+}

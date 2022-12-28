@@ -1,0 +1,117 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: rgb(251, 251, 199);
+    background-image: url("./skull.svg");
+    background-image: url("./icons3/bodybackground.svg");
+    background-size: 10%;
+    background-repeat: space;
+    overflow: hidden;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: repeat(12, 1fr [mainRow])/repeat(12, 1fr [mainColumn]);
+}
+
+.navBar{
+    background-image: linear-gradient(brown, transparent);
+    grid-column: 1/ span 12;
+    font-family: 'Exo 2', sans-serif;
+    color: rgb(251, 251, 199);
+    font-size: 1.2rem;
+}
+
+.navBar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBar ul li{
+    display: inline;
+    margin: 0.2em;
+    padding: 0.2em;
+    border: 0.1em solid rgb(251, 251, 199);
+    border-radius: 0.4em;
+    user-select: none;
+}
+
+.navBar ul li:hover{
+    border-color: rgb(195, 142, 142);
+}
+
+.navBar ul li:active{
+    background-color: #fbfbc7;
+    color: brown;
+    border-color: transparent;
+}
+
+.skullLogo{
+    border-radius: 50%;
+    grid-column: 3/ span 8;
+    grid-row: 2/ span 11;
+    background-image: url("./icons/aries.svg"), url("./icons/geminiLOGO.svg");
+    background-size: 75%, 2%;
+    background-repeat: space;
+    background-position: 50% 40%;
+    border: 0.4vh solid rgb(211, 100, 10);
+    background-clip: padding-box;
+    backdrop-filter: blur(1px);
+}
+
+.skullLogo:hover{
+    background-image: url("./icons/aries.svg"), url("./icons/leoLOGO.svg");
+}
+
+.content{
+    display: none;
+    padding: 0.1em;
+    position: relative;
+    grid-row: 2/ span 11;
+    grid-column: 1/ span 8;
+    background-color: rgb(234, 64, 64);
+    z-index: 1;
+    overflow: scroll;
+    user-select: none;
+}
+
+.rotatum{
+    display: none;
+    z-index: 0;
+    grid-row: 3/ span 9;
+    grid-column: 9/ span 4;
+    background-color: rgb(194, 8, 8);
+    background-image: url("./icons/rotatum.svg");
+    background-position: 50% 50%;
+    background-size: 100%;
+    animation: ROTATUM 4s ease-in-out infinite alternate;
+}
+
+@keyframes ROTATUM {
+    to{
+        background-size: 20%;
+        background-color: #f9b274;
+    }
+}
+
+@media (max-width: 1200px){
+    .navBar ul li{
+        background-color: rgba(120, 26, 26, 0.5);
+        font-size: 3vh;
+    }
+}
+
+@media (min-width: 2000px){
+    .navBar ul li{
+        background-color: rgb(251, 251, 199);
+        border-color: rgb(251, 251, 199);
+        color: brown;
+        font-size: 1.5vh;
+    }
+}

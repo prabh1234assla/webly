@@ -1,0 +1,68 @@
+#Contacts{
+    display: none;
+    color: #fbfbc7;
+    font-family: 'Exo 2', sans-serif;
+    border: 0.3em double brown;
+    border-radius: 6vh;
+    padding: 0.5em;
+    background-image: url("./icons/virgoLOGO.svg");
+    background-size: 10%;
+    background-position: 50% 50%;
+    background-repeat: space;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-clip: padding-box;
+}
+
+#Contacts ul li{
+    list-style: none;
+    margin: 0.3em;
+    background-color: #fbfbc763;
+    border-radius: 1rem;
+    padding: 0.1em;
+    text-align: center;
+    background-image: url("./icons/libraLOGO.svg");
+    background-position: 50% 50%;
+    background-size: 20px;
+    background-repeat: space;
+    transition: background-size 0s;
+    font-size: 2em;
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+#Contacts ul li:hover{
+    background-size: 40px;
+    transition: background-size 1s ease-in-out;
+}
+
+#Contacts :is(h1, h3){
+    color: rgb(252, 163, 163);
+}
+
+#Contacts ul li a{
+    text-decoration: none;
+    color: rgb(58, 57, 57);
+}
+
+#Contacts ul li a:hover{
+    text-shadow: 1px 1px yellow;
+}
+
+#Contacts ul li a:active{
+    text-shadow: 1px 1px black;
+    color: red;
+}
+
+#Contacts ul li img{
+    width: 5%;
+    vertical-align: middle;
+    margin: 0.2em;
+}
+
+@media (max-width: 900px){
+    #Contacts{
+        font-size: 3vh;
+    }
+}

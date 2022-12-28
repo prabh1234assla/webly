@@ -1,0 +1,51 @@
+#Bio{
+    display: none;
+}
+
+#Bio header{
+    color: #ffff9b;
+    font-family: 'Exo 2', sans-serif;
+}
+
+#Bio header img{
+    width: 100px;
+    float: left;
+    margin: 0.1em;
+    border: 0.2em dotted rgb(251, 251, 199);
+    padding: 0.05em;
+    border-radius: 18px;
+}
+
+#BioContent{
+    color: #ffff9b;
+    font-family: 'Exo 2', sans-serif;
+}
+
+#BioContent h1{
+    color: rgb(105, 4, 4);
+    margin: 0.2em;
+}
+
+#BioContent h1:hover{
+    color: rgb(250, 135, 135);
+}
+
+#BioContent article{
+    border: 0.4em dotted brown;
+    padding: 0.2em;
+    margin: 0.2em;
+    height: auto;
+    overflow: auto;
+}
+
+#BioContent article img{
+    border: 0.2em double rgb(250, 135, 135);
+    float: right;
+    width: 15%;
+    height: fit-content;
+    border-radius: 10%;
+}
+
+#BioContent article ul li{
+    list-style: none;
+}
