@@ -4,12 +4,12 @@
 }
 
 body{
-    background-color: rgb(251, 251, 199);
-    background-image: url("./skull.svg");
-    background-image: url("./icons3/bodybackground.svg");
-    background-size: 10%;
-    background-repeat: space;
     overflow: hidden;
+    background-color: #974905;
+    background-image: url("./icons/canvas.svg"), url("./icons/circlePattern.svg");
+    background-size: 80%, 10%;
+    background-position: 50% 70%, 100% 50%;
+    background-repeat: space, round;
 }
 
 .main{
@@ -20,7 +20,10 @@ body{
 }
 
 .navBar{
-    background-image: linear-gradient(brown, transparent);
+    background-image: url("./icons/geminiLOGO_.svg");
+    background-size: 1%;
+    background-repeat: round;
+    background-position: 50% 50%;
     grid-column: 1/ span 12;
     font-family: 'Exo 2', sans-serif;
     color: rgb(251, 251, 199);
@@ -56,17 +59,18 @@ body{
     border-radius: 50%;
     grid-column: 3/ span 8;
     grid-row: 2/ span 11;
-    background-image: url("./icons/aries.svg"), url("./icons/geminiLOGO.svg");
-    background-size: 75%, 2%;
-    background-repeat: space;
+    background-image: url("./icons/aries.svg");
+    background-size: 75%;
+    background-repeat: no-repeat;
     background-position: 50% 40%;
-    border: 0.4vh solid rgb(211, 100, 10);
     background-clip: padding-box;
-    backdrop-filter: blur(1px);
+    transition: transform 800ms ease-in-out;
 }
 
 .skullLogo:hover{
-    background-image: url("./icons/aries.svg"), url("./icons/leoLOGO.svg");
+    transform: rotate(1turn);
+    background-image: url("./icons/aries1.svg");
+    transition: transform 4s ease-in-out;
 }
 
 .content{
