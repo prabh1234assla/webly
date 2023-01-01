@@ -9,7 +9,7 @@
    height="1066.6667"
    viewBox="0 0 1066.6667 1066.6667"
    sodipodi:docname="aries.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -50,9 +50,9 @@
      inkscape:window-height="1003"
      id="namedview817"
      showgrid="false"
-     inkscape:zoom="0.79593744"
-     inkscape:cx="478.05265"
-     inkscape:cy="540.87165"
+     inkscape:zoom="0.56281276"
+     inkscape:cx="468.18412"
+     inkscape:cy="544.58609"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -63,7 +63,14 @@
      id="aries"
      inkscape:groupmode="layer"
      inkscape:label="aries"
-     transform="matrix(1.3333333,0,0,-1.3333333,0,1066.6667)"><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,1066.6667)"><ellipse
+       style="opacity:0.5;fill:#d46d00;fill-opacity:1;stroke-width:3.30182;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.701961;paint-order:stroke fill markers"
+       id="path6787"
+       cx="401.29947"
+       cy="-422.34164"
+       transform="scale(1,-1)"
+       rx="359.62381"
+       ry="316.47336" /><g
        id="level11"
        transform="matrix(1,0,0,1.0022205,-0.24401726,-1.529141)"
        style="fill:#782121;fill-opacity:1;stroke:none;stroke-width:3.9219;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"><g

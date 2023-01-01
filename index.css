@@ -5,11 +5,11 @@
 
 body{
     overflow: hidden;
-    background-color: #974905;
-    background-image: url("./icons/canvas.svg"), url("./icons/circlePattern.svg");
-    background-size: 80%, 10%;
-    background-position: 50% 70%, 100% 50%;
-    background-repeat: space, round;
+    background-color: #914502;
+    background-image: url("./icons/circlePattern.svg");
+    background-size: 10%;
+    background-position: 100% 50%;
+    background-repeat: space;
 }
 
 .main{
@@ -28,6 +28,8 @@ body{
     font-family: 'Exo 2', sans-serif;
     color: rgb(251, 251, 199);
     font-size: 1.2rem;
+    border-bottom: 0.5vh dotted rgb(254, 135, 61);
+    background-clip: padding-box;
 }
 
 .navBar ul{
@@ -40,19 +42,22 @@ body{
     display: inline;
     margin: 0.2em;
     padding: 0.2em;
-    border: 0.1em solid rgb(251, 251, 199);
+    outline: 0.1em solid rgb(251, 251, 199);
+    outline-offset: 0.1em;
+    background-color: #ffc695;
+    color: #9a4b06;
     border-radius: 0.4em;
     user-select: none;
+    text-align: center;
 }
 
 .navBar ul li:hover{
-    border-color: rgb(195, 142, 142);
+    outline-color: burlywood;
 }
 
 .navBar ul li:active{
-    background-color: #fbfbc7;
-    color: brown;
-    border-color: transparent;
+    background-color: #9a4b06;
+    color: #ffc695;
 }
 
 .skullLogo{
@@ -104,18 +109,20 @@ body{
     }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 360px){
     .navBar ul li{
-        background-color: rgba(120, 26, 26, 0.5);
-        font-size: 3vh;
+        font-size: 0.2vh;
     }
 }
 
-@media (min-width: 2000px){
+@media (max-height: 1400px){
     .navBar ul li{
-        background-color: rgb(251, 251, 199);
-        border-color: rgb(251, 251, 199);
-        color: brown;
         font-size: 1.5vh;
+    }
+}
+
+@media (min-height: 700px) and (min-width: 1200px){
+    .navBar ul li{
+        font-size: 2vh;
     }
 }
