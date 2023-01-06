@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>characterFrequency</title>
+</head>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        #container{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(66, 67, 67);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            background-image: url("./pattern.svg");
+            background-position: 50% 50%;
+            background-repeat: space;
+            background-size: 20%;
+            animation: backgroundChange 8s alternate infinite;
+        }
+
+        @keyframes backgroundChange{
+            to{
+                background-size: 10%;
+            }   
+        }
+
+        #container section:not(#container section section){
+            background-image: url("./pink.svg");
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-color: rgb(79, 79, 79);
+            border-radius: 20px;
+        }
+
+        #container section section{
+            border: 2px solid pink;
+            margin: 1em;
+            border-radius: 10px;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-clip: padding-box;
+            font: bolder 1.2em 'Courier New', Courier, monospace;
+        }
+
+        textarea{
+            background-color: rgba(255, 192, 203, 0.605);
+            border: 0;
+            outline: 0;
+            border-radius: 2em;
+            font: inherit;
+            height: 300px;
+            width: 600px;
+            margin: 0.1em;
+            user-select: none;
+            resize: horizontal;
+            padding: 2em;
+            margin: 1em;
+            text-align: center;
+            transition: backdrop-filter 1s;
+        }
+
+        textarea:hover{
+            background-color: rgb(120, 119, 119, 0.5);
+            color: pink;
+            backdrop-filter: blur(50px);
+        }
+
+        p{
+            font: inherit;
+            color: beige;
+            background-color: rgba(0, 0, 0, 0.558);
+            border-radius: 40px;
+            padding: 0.1em;
+            margin: 0.2em;
+        }
+
+        #get{
+            background-color: rgba(0, 0, 0, 0.632);
+            border: 0;
+            outline: 0;
+            border-radius: 0.4em;
+            font: inherit;
+            color: pink;
+            width: 50px;
+            padding: 0.3em;
+            text-align: center;
+            border: 1px solid pink;
+            margin: 2px;
+        }
+
+        #put{
+            background-color: rgb(255, 112, 136);
+            border: 0;
+            outline: 0;
+            border-radius: 0.2em;
+            font: inherit;
+            color: rgb(0, 0, 0);
+            width: 50px;
+            padding: 0.3em;
+            text-align: center;
+            margin: 2px;
+        }
+
+        #put:hover{
+            border: 1px solid black;
+        }
+
+    </style>
+<body>
+    <section id="container">
+            <section>
+                <section>
+                    <p>
+                        type your paragraph : 
+                    </p>
+                    <textarea placeholder="start typing..." oninput={change()}></textarea>
+                </section>
+                <section>
+                    <p>
+                        type character : 
+                    </p>
+                    <input id="put" maxlength="1" oninput={change()} />
+                </section>
+                <section>
+                    <p>
+                        frequency of given character : 
+                    </p>
+                    <input id="get" disabled value=0 />
+                </section>
+            </section>
+    </section>
+</body>
+<script>
+"use strict";
+
+    function change(){
+        let textBox = document.querySelector("textarea"),
+        inputFromPut = document.querySelector("#put"),
+        inputFromGet = document.querySelector("#get"),
+            sum = 0;
+
+        for(let i of textBox.value)
+            inputFromPut.value === i ? sum+=1 : sum+=0
+            
+        return inputFromGet.value = sum;
+    }
+
+</script>
+</html>

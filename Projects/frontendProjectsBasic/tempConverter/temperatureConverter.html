@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temperature Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet"> 
+</head>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        #container{
+            height: 100vh;
+            width: 100vw;
+            background-color: orange;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Kosugi Maru', sans-serif;
+            background-image: url("./thermometer.svg");
+            background-size: 2%;
+            background-repeat: space;
+        }
+
+        #container section{
+            height: fit-content;
+            border: 0.2em dotted bisque;
+            padding: 0.2em;
+            margin: 0.2em;
+            font-family: inherit;
+            background-color: rgba(197, 88, 15, 0.667);
+            padding: 1em;
+            outline: 0.2em solid rgb(197, 87, 15);
+            margin: 1.5em;
+            border-radius: 2px;
+        }
+
+        #container section input{
+            border: 0;
+            outline: 0;
+            border-radius: 5px;
+            margin: 0.1em;
+            padding: 0.2em;
+            font-family: inherit;
+        }
+
+        #container #INPUT input:active{
+            outline: 0.1em solid rgb(0, 0, 0);
+        }
+
+        #INPUT input{
+            background-color: rgb(255, 174, 0);
+        }
+
+        #OUTPUT input{
+            background-color: rgba(237, 194, 113, 0.827);
+        }
+
+        ul{
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 0.2em 1em;
+            border-radius: 50px;
+            backdrop-filter: blur(1px);
+            width: min-content;
+            border: 0.2em double brown;
+        }
+
+        ul li{
+            height: 20px;
+            width: 60px;
+            text-align: center;
+            background-color: orange;
+            border-radius: 20px;
+            list-style: none;
+            position: relative;
+            transition: margin 1s;
+            padding-top: 0.1em;
+            user-select: none;
+            font-size: 1em;
+            font-weight: bolder;
+        }
+
+        ul li:not(.firstItem){
+            margin-top: -20px;
+        }
+
+        ul li:hover{
+            background-color: rgba(165, 42, 42, 0.545);
+            color: aliceblue;
+        }
+
+        ul li:active{
+            background-color: rgb(255, 210, 97);
+            color: brown;
+        }
+
+    </style>
+<body>
+    <section id="container">
+            <section id="INPUT">
+                enter temperature : 
+                <input oninput={convert()} placeholder="0" />
+                <ul onmouseenter={listOperation(1)} onmouseleave={listOperation(0)}>
+                    <li class="firstItem" onclick="optionSelected(1)" style="z-index: 0; " >°F</li>
+                    <li onclick="optionSelected(1)" style="z-index: 0; ">°C</li>
+                    <li onclick="optionSelected(1)" style="z-index: 1; ">K</li>
+                </ul>
+            </section>
+
+            <section id="OUTPUT">
+                final temperature :
+                <input disabled placeholder="invalid conversion"/>
+                <ul onmouseenter="{listOperation(1)}" onmouseleave={listOperation(0)}>
+                    <li class="firstItem" onclick="optionSelected(0)" style="z-index: 0; " >°F</li>
+                    <li onclick="optionSelected(0)" style="z-index: 0; ">°C</li>
+                    <li onclick="optionSelected(0)" style="z-index: 1; ">K</li>
+                </ul>
+            </section>
+    </section>
+</body>
+<script>
+    "use strict";
+
+    var unitFrom = "K", unitTo = "K";
+
+    const CtoF = (C) => {
+        return C*1.8 + 32;
+    }
+
+    const FtoC = (F) => {
+        return (F-32)/1.8;
+    }
+
+    const FtoK = (F) => {
+        return CtoK(FtoC(F));
+    }
+
+    const CtoK = (C) => {
+        return C + 273.15;
+    }
+
+    const KtoF = (K) => {
+        return CtoF(KtoC(K));
+    }
+
+    const KtoC = (K) => {
+        return K - 273.15;
+    }
+
+    function FinalOutputGenerator(value){
+            
+        if(unitFrom !== unitTo){
+            switch(unitFrom){
+                case "°F" :
+                    switch(unitTo){
+                        case "°C" :
+                            return FtoC(value);
+                            break;
+
+                        case "K" :
+                            return FtoK(value);
+                            break;
+                    }
+                break;
+
+                case "°C" :
+                    switch(unitTo){
+                        case "°F" :
+                            return CtoF(value);
+                            break;
+
+                        case "K" :
+                            return CtoK(value);
+                            break;
+                    }
+                break;
+
+                case "K" :
+                    switch(unitTo){
+                        case "°F" :
+                            return KtoF(value);
+                            break;
+
+                        case "°C" :
+                            return KtoC(value);
+                            break;
+                    }
+                break;       
+            }
+        }
+
+        else
+            return "invalid conversion";
+    }
+
+    function convert(){
+        const input = document.querySelector("#INPUT input"),
+        output = document.querySelector("#OUTPUT input"),
+        value = +input.value;
+
+        if(isNaN(value))
+            return output.value = "wrong temperature input";
+
+        else
+            return output.value = FinalOutputGenerator(value);
+
+    return null;
+    }
+
+    function listOperation(choice){
+        const listElements = event.target.children;
+
+        if(choice)
+        for(let i=1; i<listElements.length; ++i)
+            listElements[i].style.marginTop = "0px";
+        else
+        for(let i=1; i<listElements.length; ++i)
+            listElements[i].style.marginTop = "-20px";
+
+    return null;
+    }
+
+    function optionSelected(choice){
+        const currentElement = event.target,
+        allSiblings = currentElement.parentNode.children;
+
+        currentElement.style.zIndex = 1; 
+
+            for(let i=0; i<allSiblings.length; ++i)
+                if(allSiblings[i] !== currentElement)
+                    allSiblings[i].style.zIndex = 0;
+
+    if(choice)
+        unitFrom = currentElement.textContent;
+    else
+        unitTo = currentElement.textContent;
+
+    return convert();
+    }
+</script>
+
+</html>

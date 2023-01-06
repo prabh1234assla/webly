@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webpage2!</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(48, 47, 47);
+    }
+
+    .front,
+    img,
+    .back {
+      border-radius: inherit;
+    }
+
+    .container {
+      border: 0.8vh dotted rgb(159, 85, 24);
+      border-radius: 5vh;
+      width: 1200px;
+      height: 600px;
+      transition: transform 1s;
+    }
+    .container:hover {
+      transform: rotateY(0.5turn);
+      transform-style: preserve-3d;
+    }
+    .front {
+      font-size: 9em;
+      font-variant: small-caps;
+      font-family: monospace;
+      color: lightcoral;
+    }
+
+    .back {
+      height: inherit;
+      width: inherit;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      color: rgb(76, 13, 13);
+      font: bold 2em monospace;
+
+      transform: rotateY(0.5turn);
+      backface-visibility: hidden;
+      background-color: rgba(158, 151, 151, 0.6);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="front">
+        <img
+          src="https://cdn.dribbble.com/users/470545/screenshots/4339126/fish-animation_v1.gif"
+        />
+        fish
+      </div>
+      <div class="back">
+        <h1>fish :</h1>
+        <p>
+          Fish are aquatic, craniate, gill-bearing animals that lack limbs with
+          digits. Included in this definition are the living hagfish, lampreys,
+          and cartilaginous and bony fish as well as various extinct related
+          groups. Approximately 95% of living fish species are ray-finned fish,
+          belonging to the class Actinopterygii, with around 99% of those being
+          teleosts.
+        </p>
+        <p>
+          The earliest organisms that can be classified as fish were soft-bodied
+          chordates that first appeared during the Cambrian period. Although
+          they lacked a true spine, they possessed notochords which allowed them
+          to be more agile than their invertebrate counterparts. Fish would
+          continue to evolve through the Paleozoic era, diversifying into a wide
+          variety of forms. Many fish of the Paleozoic developed external armor
+          that protected them from predators.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

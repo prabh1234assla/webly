@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+body {
+  background-color: rgb(35, 33, 33);
+  overflow: hidden;
+}
+
+.SCENERY {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CONTAINER {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  animation: air 0.5s ease-in-out infinite backwards;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 116, 255, 0.5),
+      rgba(1, 0, 255, 0.5)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(187, 187, 253, 0.5) 0px 5px,
+      rgba(255, 255, 255, 0.5) 5px 10px
+    );
+
+  transform: perspective(30vh) rotateX(45deg);
+  transform-style: preserve-3d;
+  border: 50vh double rgba(94, 61, 202, 0.715);
+  background-clip: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes air {
+  to {
+    background-image: linear-gradient(
+        90deg,
+        rgba(1, 0, 255, 0.5),
+        rgba(0, 116, 255, 0.5)
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.5) 0px 5px,
+        rgba(187, 187, 253, 0.5) 5px 10px
+      );
+  }
+}
+@keyframes shift {
+  to {
+    transform: perspective(10vh) rotateX(45deg);
+  }
+}
+
+.__cont {
+  height: 70vh;
+  width: 70vh;
+  background-color: rgba(255, 192, 203, 0.421);
+  border-radius: 50%;
+
+  transform: rotateX(-45deg) translateY(-7vh);
+  color: rgb(255, 179, 0);
+  font-size: 6vh;
+  text-align: center;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  outline: 0.8vh double rgba(229, 181, 255, 0.861);
+  outline-offset: 0.5vh;
+}
+
+:is(#l1, #l3, #l5, #l7) > path {
+  animation: layerAAA 0.5s ease-in-out infinite alternate !important;
+}
+
+:is(#l2, #l4, #l6) > path {
+  animation: layerBBB 0.5s ease-in-out infinite alternate !important;
+}
+
+@keyframes layerAAA {
+  to {
+    fill: rgb(18, 0, 137);
+    transform: translateY(1px);
+  }
+}
+
+@keyframes layerBBB {
+  to {
+    fill: rgb(21, 111, 175);
+    transform: scale(1.01);
+  }
+}
+
+#boat > path:not(#path11885-6-7-0, #path11885-6) {
+  animation: layerCCC 0.5s ease-in-out infinite alternate !important;
+}
+
+@keyframes layerCCC {
+  to {
+    transform: rotate(0.4deg);
+  }
+}
+
+#oars {
+  animation: layerDDD 0.5s ease-in-out infinite alternate !important;
+}
+
+@keyframes layerDDD {
+  to {
+    transform: rotate(7deg);
+  }
+}
+
+.info {
+  height: fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: transform 200ms, color 200ms;
+
+  transform: translateY(11vh);
+  font-family: "Comfortaa", cursive;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 7vw;
+}
+
+.CONTAINER:hover .__cont::before {
+  content: "◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯";
+  word-wrap: break-word;
+  height: fit-content;
+  width: 180vh;
+  position: absolute;
+  z-index: -1;
+  border-radius: 3vh;
+  outline-offset: 0.4vh;
+  background-clip: content-box;
+}
+
+.CONTAINER:hover .__cont {
+  outline-color: rgba(255, 166, 0, 0.4);
+  background-color: orange;
+}
+
+.CONTAINER:hover .info {
+  transform: translateY(18vh);
+  color: rgb(234, 152, 28);
+}

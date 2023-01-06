@@ -1,0 +1,42 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#path2 {
+  animation: offset2 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes offset2 {
+  from {
+    stroke-dashoffset: 5vh;
+    stroke-width: 1vh;
+    stroke-dasharray: 20vh;
+  }
+  to {
+    stroke-dashoffset: 10vh;
+    stroke-width: 6vh;
+    stroke-dasharray: 40vh;
+  }
+}
+
+circle{
+  fill: rgba(98, 163, 233, 0.8);
+  stroke: rgb(242, 205, 132);
+  stroke-width: 4vh;
+  stroke-dasharray: 1vh;
+  stroke-linejoin: round;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>webpage1!</title>
+    <style>
+      body {
+        background-image: linear-gradient(
+          252deg,
+          #4158d0 0%,
+          #c850c0 59%,
+          #ffcc70 100%
+        );
+      }
+
+      div {
+        display: inline-block;
+        position: absolute;
+      }
+
+      #cage {
+        top: 2vh;
+        left: 20vw;
+        font: bolder 20vh monospace;
+        color: transparent;
+        background-image: repeating-linear-gradient(
+            120deg,
+            rgb(0, 0, 0, 0.4) 0vh 1vh,
+            rgb(255, 255, 255, 0.4) 1vh 2vh
+          ),
+          repeating-linear-gradient(
+            -120deg,
+            rgb(0, 0, 0, 0.4) 0vh 1vh,
+            rgb(255, 255, 255, 0.4) 1vh 2vh
+          );
+        background-clip: text;
+      }
+
+      #bird {
+        top: 10vh;
+        left: 20vw;
+        background: url("https://studio.code.org/v3/assets/5Cut6Vgu1euQkR8hXbJIczgSRch5Ij8XZHxWar6wePE/humming-bird.gif")
+          center/contain no-repeat;
+        width: 13vh;
+        height: 13vh;
+        z-index: -1;
+        transition: transform 2s, height 2s, width 2s;
+      }
+
+      #info {
+        top: 28vh;
+        left: 19.6vw;
+        font: bolder 3vh monospace;
+        background: rgb(255, 230, 0) bottom/cover no-repeat text;
+        color: transparent;
+        width: 55vw;
+
+        transition: transform 200ms;
+        transform-origin: 0% 0%;
+        transform: scale(1, 0);
+      }
+	  
+      #cage:hover {
+        mix-blend-mode: color-burn;
+      }
+
+      #cage:hover + #bird {
+        transform: translate(-46vh, 10vh) rotateY(180deg);
+        width: 50vh;
+        height: 50vh;
+      }
+
+      #cage:hover ~ #info {
+        transform: scale(1, 1);
+      }
+	  
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="cage">☗hummingBird</div>
+      <div id="bird"></div>
+      <div id="info">
+        hummingbird, any of about 320 species of small, often brightly coloured
+        birds of the family Trochilidae, usually placed with the swifts in the
+        order Apodiformes but sometimes separated in their own order,
+        Trochiliformes. The brilliant, glittering colours and elaborately
+        specialized feathers of many species (usually of the males only) led the
+        19th-century British naturalist John Gould to give many hummingbirds
+        exotic common names, many of which are still in use—e.g., coquette,
+        fairy, hill star, wood star, sapphire, topaz, sun gem, and sylph.
+      </div>
+    </div>
+  </body>
+</html>

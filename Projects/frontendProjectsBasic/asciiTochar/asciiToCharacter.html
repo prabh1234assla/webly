@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsciiToCharacter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        #main{
+            background-position: 50% 50%;
+            background-color: #005649;
+            background-image: url("./dinosour.svg"), url("./leaves.svg");
+            background-repeat: no-repeat;
+            background-size: 43%, 100%;
+            font: bolder 3em 'Montserrat', sans-serif;
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input{
+            border: 0.2em solid rgb(0, 64, 64);
+            background-color: #0056498e;
+            color: yellow;
+            font: inherit;
+            margin: 0.1em;
+            padding: 0.1em;
+            border-radius: 300px;
+            outline: 0;
+        }
+
+        input:active{
+            background-color: #0000008e;
+        }
+
+        #input, #output{
+            height: fit-content;
+            background-color: rgba(79, 203, 162, 0.813);
+            border-radius: 300px;
+            padding: 0.1em;
+            margin: 0.2em;
+            color: rgb(0, 64, 64);
+            user-select: none;
+        }
+
+        .flyingDinosaur{
+            height: 1px;
+            width: 1px;
+            position: fixed;
+            background-color: rgb(245, 222, 179, 0.4);
+            border-radius: 50%;
+            background-image: url("./dino.svg");
+            background-size: 90%;
+            background-position: 100% 50%;
+            background-repeat: no-repeat;
+            animation: glow 1s alternate infinite;
+        }
+
+        @keyframes glow {
+            to{
+                scale: 900;
+                box-shadow: 0px 0px 0px 100vh rgb(0, 0, 0);
+                color: #005649;
+            }
+        }
+
+    </style>
+<body>
+    <section id="main" ondblclick={followDinosaur()}>
+        <section id="input">
+            enter your ascii code : 
+            <input id="get" onchange={returnVal()} placeholder="0"/>
+        </section>
+        <section id="output">
+            corresponding char value : 
+            <input id="put" disabled placeholder="0" />
+        </section>
+    </section>
+</body>
+    <script>
+
+    "use strict";
+
+    function returnVal(){
+        const charVal = +document.querySelector("#get").value,
+        outputContainer = document.querySelector("#put");
+
+        if( isNaN(charVal) )
+            return outputContainer.value = "wrong ascii value";
+        else
+            return outputContainer.value = String.fromCharCode(charVal);
+    }
+
+    function followDinosaur(){
+        const el = document.createElement("div");
+        const mainBox = document.querySelector("#main");
+        
+        document.body.appendChild(el);
+
+        el.classList.add("flyingDinosaur");
+        el.style.left = `${event.clientX}px`;
+        el.style.top = `${event.clientY}px`;
+
+        setTimeout(function(){
+            el.remove();
+        }, 2000);
+    }
+
+    </script>
+</html>

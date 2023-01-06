@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&family=Mali:wght@600&display=swap');
+
+body{
+    background-color: rgb(131, 131, 131);
+}
+
+#video{
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+
+}
+
+#info{
+
+    padding: 20px;
+    margin: 15px;
+    z-index: 1;
+    user-select: none;
+
+}
+
+
+#poem{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.thoughts{
+
+    text-align: center;
+
+    font-size: 25px;
+    font-family: 'Mali', cursive;
+    background-color: rgba(76, 175, 233, 0.836);
+    color: rgb(255, 255, 255);
+
+}
+
+#foot{
+
+    text-align: center;
+    text-shadow: 5pt 5pt 5pt rgb(216, 199, 125);
+
+    font-size: 60px;
+    font-family: 'Advent Pro', cursive;
+
+    background-image: url("https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+
+    color: rgba(255, 255, 255, 0.8);
+    text-emphasis: '₪' rgb(57, 221, 221);
+
+    width: 100%;
+    height: 600px;
+    user-select: none;
+
+}
