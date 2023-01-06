@@ -7,9 +7,17 @@
     font-family: 'Exo 2', sans-serif;
 }
 
+header h2{
+    color: rgb(255, 211, 192);
+}
+
+header h4{
+    color: rgb(255, 221, 221);
+}
+
 #Bio header img{
     width: 100px;
-    float: left;
+    float: right;
     margin: 0.1em;
     border: 0.2em dotted rgb(251, 251, 199);
     padding: 0.05em;
