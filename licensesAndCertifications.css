@@ -1,4 +1,50 @@
 #LicensesAndCertifications{
     display: flex;
     flex-direction: column;
+    background-image: url("./icons1/background.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 50% 50%;
+}
+
+#LicensesAndCertifications section{
+    text-align: center;
+    background-color: rgba(165, 42, 42, 0.471);
+    padding: 2em;
+    margin: 0.1em;
+    backdrop-filter: blur(8px);
+    border: 1px dotted wheat;
+    background-clip: padding-box;
+}
+
+section img{
+    width: 8%;
+    background-color: rgb(146, 41, 41);
+    border-radius: 0.2em;
+    padding: 0.2em;
+    border: 0.1em double rgb(252, 99, 99);
+}
+
+section h1{
+    color: rgb(255, 205, 140);
+}
+
+section h4{
+    color: rgb(255, 161, 161);
+}
+
+section h6{
+    color: rgb(255, 191, 72);
+}
+
+section h1:hover{
+    color: rgb(255, 107, 8);
+}
+
+section h4:hover{
+    color: rgb(120, 8, 8);
+}
+
+section h6:hover{
+    color: rgb(181, 181, 181);
 }
