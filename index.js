@@ -5,7 +5,8 @@ rotatum = document.getElementById("rotatum"),
 bio = document.getElementById("Bio"),
 contacts = document.getElementById("Contacts"),
 experience = document.getElementById("Experience"),
-projects = document.getElementById("Projects");
+projects = document.getElementById("Projects"), 
+licensesAndCertifications = document.getElementById("LicensesAndCertifications");
 
 const displaySet = (el, display) => {
     return el.style.display = display;
@@ -34,21 +35,25 @@ const displayAlter = (el, value, ...others) => {
 }
 
 document.getElementById("home").addEventListener("click", function(){
-    displayAlter(false, false, content, rotatum, bio, contacts, experience, projects);
+    displayAlter(false, false, content, rotatum, bio, contacts, experience, projects, licensesAndCertifications);
 }, false);
 
 document.getElementById("bio").addEventListener("click", function(){
-    displayAlter(bio, "block", contacts, experience, projects);
+    displayAlter(bio, "block", contacts, experience, projects, licensesAndCertifications);
 }, false);
 
 document.getElementById("contacts").addEventListener("click", function(){
-    displayAlter(contacts, "flex", experience, projects, bio);
+    displayAlter(contacts, "flex", experience, projects, licensesAndCertifications, bio);
 }, false);
 
 document.getElementById("experience").addEventListener("click", function(){
-    displayAlter(experience, "block", projects, bio, contacts);
+    displayAlter(experience, "block", projects, licensesAndCertifications, bio, contacts);
 }, false);
 
 document.getElementById("projects").addEventListener("click", function(){
-    displayAlter(projects, "block", bio, contacts, experience);
+    displayAlter(projects, "block", licensesAndCertifications, bio, contacts, experience);
+}, false);
+
+document.getElementById("licensesAndCertifications").addEventListener("click", function(){
+    displayAlter(licensesAndCertifications, "flex", bio, contacts, experience, projects);
 }, false);

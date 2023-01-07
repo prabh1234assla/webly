@@ -1,7 +1,10 @@
 #Experience {
     display: none;
     color: wheat;
-    font-family: 'Exo 2', sans-serif;;
+    font-family: 'Exo 2', sans-serif;
+    background-image: url("./icons/pamplet.svg");
+    background-size: 80%;
+    background-position: 50% 50%;
 }
 
 #Experience #Industry section{

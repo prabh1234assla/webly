@@ -95,7 +95,7 @@ body{
     z-index: 0;
     grid-row: 3/ span 9;
     grid-column: 9/ span 4;
-    background-color: rgb(194, 8, 8);
+    background-color: rgb(201, 88, 40);
     background-image: url("./icons/rotatum.svg");
     background-position: 50% 50%;
     background-size: 100%;
