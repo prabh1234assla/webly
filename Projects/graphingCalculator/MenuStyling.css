@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 :root{
-    --font: bolder 3vh 'Source Code Pro', monospace;
+    --font: bolder 1.5em 'Source Code Pro', monospace;
     --buttonHt: 5.8vh;
     --buttonWd: 19vw;
     --buttonBorderRadius: 100vh;
@@ -357,4 +357,17 @@
 
 .pointsNumber, .pointSize, .stepSize{
     font-size: 2vh;
+}
+
+/* media queries */
+@media (max-width: 1100px) {
+    :root{
+        --font: bolder 0.8em 'Source Code Pro', monospace;
+    }
+}
+
+@media (max-width: 400px) {
+    :root{
+        --font: bolder 0.6em 'Source Code Pro', monospace;
+    }
 }

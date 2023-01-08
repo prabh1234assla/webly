@@ -30,3 +30,10 @@ body{
     outline-offset: 7px;
     background-clip: padding-box;
 }
+
+@media (max-width: 600px) {
+    .dot{
+        border-radius: 10%;
+        filter: blur(1px)
+    }
+}

@@ -158,3 +158,19 @@ img{
     background-color: rgb(120, 68, 16);
     color: rgb(221, 160, 221, 0.6);
 }
+
+@media (max-width: 450px) {
+    .cube{
+        scale: 0.4
+    }
+
+    img{
+        height: 86vh;
+        width: 68vw;
+    }
+
+    .smallcube{
+        filter: blur(50px);
+        scale: 1.5 !important;
+    }
+}
