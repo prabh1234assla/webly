@@ -17,7 +17,7 @@
     background-clip: padding-box;
 }
 
-section img{
+#LicensesAndCertifications section img{
     width: 8%;
     background-color: rgb(146, 41, 41);
     border-radius: 0.2em;
@@ -25,26 +25,26 @@ section img{
     border: 0.1em double rgb(252, 99, 99);
 }
 
-section h1{
+#LicensesAndCertifications section h1{
     color: rgb(255, 205, 140);
 }
 
-section h4{
+#LicensesAndCertifications section h4{
     color: rgb(255, 161, 161);
 }
 
-section h6{
+#LicensesAndCertifications section h6{
     color: rgb(255, 191, 72);
 }
 
-section h1:hover{
+#LicensesAndCertifications section h1:hover{
     color: rgb(255, 107, 8);
 }
 
-section h4:hover{
+#LicensesAndCertifications section h4:hover{
     color: rgb(120, 8, 8);
 }
 
-section h6:hover{
+#LicensesAndCertifications section h6:hover{
     color: rgb(181, 181, 181);
 }
