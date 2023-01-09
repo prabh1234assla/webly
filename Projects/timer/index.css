@@ -15,7 +15,6 @@ body{
     height: 35vmax;
     width: 35vmax;
     margin: 4vh auto;
-
 }
 
 #seconds, #minutes{
@@ -51,7 +50,7 @@ button:active{
     scale: 0.9;
 }
 
-.info{
+#info{
     position: fixed;
     bottom: 0%;
     right: 0%;
@@ -64,4 +63,16 @@ button:active{
     border-radius: 0.4vmax;
     font: 2vmax 'Pacifico', cursive;
     color: rgb(211, 220, 162);
+}
+
+@keyframes secondsRotate {
+    to{
+        rotate: 360deg;
+    }
+}
+
+@keyframes minutesRotate {
+    to{
+        rotate: 360deg;
+    }
 }

@@ -1,109 +1,109 @@
-let secdegree = 6, minutedegree = 6, idMINS = null, idSECONDS = null, clock_is_off = true, clock_is_paused = false, elapsedSeconds = 0, elapsedMinutes = 0
+const Play = document.getElementById("play"), 
+Pause = document.getElementById("pause"),
+Stop = document.getElementById("stop"),
+Secs = document.getElementById("seconds"),
+Mins = document.getElementById("minutes"),
+Info = document.getElementById("info")
 
-const clockON = () => {
-    clock_is_off = false
+let globalTime = 0, pauseTime = 0, buffer = 0, id = 0, previousClick = null
 
-    $('#seconds').css("transform", `rotate(${secdegree}deg)`)
-
-    const _minutesRunning = () => {
-        $('#minutes').css("transform", `rotate(${minutedegree}deg)`)
-        minutedegree = (minutedegree+6)%360
-        ++elapsedMinutes
-
-        console.log(elapsedMinutes)
-
-        $('.info').html(elapsedMinutes.toString().concat("::").concat(elapsedSeconds.toString()))
-    }
+Play.addEventListener("click", function(event){
     
-    const _secondsRunning = () => {
-        $('#seconds').css("transform", `rotate(${secdegree}deg)`)
-        secdegree = (secdegree+6)%360
-        elapsedSeconds = (elapsedSeconds+1)%60
+    if(Play.textContent == "Play"){
+        if(previousClick !== "PLAY"){
+            globalTime = new Date()
+            ChangeInfo(0)
+            changeClockAnimation(0)
 
-        console.log(elapsedSeconds)
-
-        $('.info').html(elapsedMinutes.toString().concat("::").concat(elapsedSeconds.toString()))
+            previousClick = "PLAY"
+        }
     }
 
-    if(!idMINS){
-        idMINS = setInterval(function(){
-            _minutesRunning()
-        }, 60000)
+    else{
+        if(previousClick !== "RESUME"){
+            Play.textContent = "Play"
+            ChangeInfo(2)
+            changeClockAnimation(0)
+
+            previousClick = "RESUME"
+        }
+    }
+}, false)
+
+Pause.addEventListener("click", function(event){
+
+    if(previousClick !== "PAUSE"){
+        pauseTime = new Date()
+        Play.textContent = "Resume"
+    
+        ChangeInfo(1)
+        changeClockAnimation(1)
+
+        previousClick = "PAUSE"
+    }
+}, false)
+
+Stop.addEventListener("click", function(event){
+
+    if(previousClick !== "STOP"){
+        globalTime = 0
+        pauseTime = 0
+    
+        ChangeInfo(3)
+        changeClockAnimation(2)
+
+        previousClick = "STOP"
+    }
+}, false)
+
+function changeClockAnimation( response ){
+    if(!response){
+        Secs.style.animation = "secondsRotate 60s steps(60, end) infinite"
+        Mins.style.animation = "minutesRotate 3600s steps(60, end) infinite"
+        Secs.style.animationPlayState = "running"
+        Mins.style.animationPlayState = "running"
     }
 
-    if(!idSECONDS){
-        idSECONDS = setInterval(function(){
-            _secondsRunning()
-        }, 1000)
+    else if(response == 1){
+        Secs.style.animationPlayState = "paused"
+        Mins.style.animationPlayState = "paused"
+    }
+
+    else{
+        if(Play.textContent != "Play")
+            Play.textContent = "Play"
+            
+        Secs.style.animation = ""
+        Secs.style.rotate = 0
+        Mins.style.animation = ""
+        Mins.style.rotate = 0
     }
 }
 
-const clockOFF = () => {
-    clock_is_off = true
+function ChangeInfo(response){
+    let temp = null, S = null
 
-    $('#minutes').css("transform", "rotate(0deg)")
+    if(!response)
+        id = setInterval(()=>{
+            temp = new Date()
+                S = Math.floor((temp - globalTime - buffer)/1000)
+                Info.textContent = S%60 + "secs ::" + parseInt(S/60) + "mins"
+        }, 100)
 
-    if(idMINS){
-        clearInterval(idMINS)
-        idMINS = null
+    else if(response == 1)
+        clearInterval(id)
+    
+    else if(response == 2){
+        temp = new Date()
+        buffer += temp - pauseTime
+
+        ChangeInfo(0)
     }
 
-    $('#seconds').css("transform", "rotate(0deg)")
-
-    if(idSECONDS){
-        clearInterval(idSECONDS)
-        idSECONDS = null
+    else{
+        Info.textContent = "...click on play"
+        clearInterval(id)
+        
+        buffer = 0
     }
-
-    secdegree = 6
-    minutedegree = 6
-    elapsedSeconds = 0
-    elapsedMinutes = 0
 }
-
-const clockPAUSE = () => {
-    clock_is_paused = true
-
-    if(idMINS){
-        clearInterval(idMINS)
-        idMINS = null
-    }
-
-    if(idSECONDS){
-        clearInterval(idSECONDS)
-        idSECONDS = null
-    }
-
-}
-
-const clockRESUME = () => {
-    clock_is_paused = false
-
-        clockON()
-}
-
-$('#play').click(function(event){
-
-    if(clock_is_off)
-        clockON()
-})
-
-$('#pause').click(function(event){
-
-    if(!clock_is_paused)
-        clockPAUSE()
-})
-
-$('#resume').click(function(event){
-
-    if(clock_is_paused)
-        clockRESUME()
-})
-
-$('#stop').click(function(event){
-
-    if(!clock_is_off)
-        clockOFF()
-
-    $('.info').html("...click on play")
-})
