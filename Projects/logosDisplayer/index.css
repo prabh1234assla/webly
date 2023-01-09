@@ -37,3 +37,8 @@ body{
         filter: blur(1px)
     }
 }
+
+#lastest{
+    left: -3vh;
+    scale: 3;
+}
