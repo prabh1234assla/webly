@@ -13,7 +13,7 @@ const displaySet = (el, display) => {
 }
 
 const displayGet = (el) => {
-    return el.style.display;
+    return window.getComputedStyle(el).getPropertyValue("display");
 }
 
 const displayAlter = (el, value, ...others) => {
