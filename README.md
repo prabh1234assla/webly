@@ -1,3 +1,7 @@
-# WEBBLY : personal portfolio website
+![zodiac theme](./background.png)
 
->This a personal portfolio website that I am creating using pure CSS, Js and HTML. For graphic designing I am using Figma and Inkscape. The project is under process as of now.
+# webly
+
+## webly is a portfolio website that I have created using HTML, CSS and JavaScript...
+- doubleClicking toggles the buttons
+- the website is designed around zodiac signs as theme
