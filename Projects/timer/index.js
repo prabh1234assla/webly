@@ -5,54 +5,49 @@ Secs = document.getElementById("seconds"),
 Mins = document.getElementById("minutes"),
 Info = document.getElementById("info")
 
-let globalTime = 0, pauseTime = 0, buffer = 0, id = 0, previousClick = null
+let globalTime = 0, pauseTime = 0, buffer = 0, id = 0, resumeflag = false, pauseflag = false
 
 Play.addEventListener("click", function(event){
     
-    if(Play.textContent == "Play"){
-        if(previousClick !== "PLAY"){
-            globalTime = new Date()
-            ChangeInfo(0)
-            changeClockAnimation(0)
-
-            previousClick = "PLAY"
-        }
+    if(Play.textContent == "Play" && id == 0){
+        globalTime = new Date()
+        ChangeInfo(0)
+        changeClockAnimation(0)
     }
 
-    else{
-        if(previousClick !== "RESUME"){
-            Play.textContent = "Play"
-            ChangeInfo(2)
-            changeClockAnimation(0)
+    if(Play.textContent == "Resume" && resumeflag){
+        Play.textContent = "Play"
+        ChangeInfo(2)
+        changeClockAnimation(0)
 
-            previousClick = "RESUME"
-        }
+        resumeflag = false
+        pauseflag = false
     }
 }, false)
 
 Pause.addEventListener("click", function(event){
 
-    if(previousClick !== "PAUSE"){
+    if(id != 0 && !pauseflag){
         pauseTime = new Date()
         Play.textContent = "Resume"
     
         ChangeInfo(1)
         changeClockAnimation(1)
-
-        previousClick = "PAUSE"
+        
+        pauseflag = true
+        resumeflag = true
     }
 }, false)
 
 Stop.addEventListener("click", function(event){
 
-    if(previousClick !== "STOP"){
+    if(id != 0){
         globalTime = 0
         pauseTime = 0
     
         ChangeInfo(3)
         changeClockAnimation(2)
-
-        previousClick = "STOP"
+        id = 0
     }
 }, false)
 
