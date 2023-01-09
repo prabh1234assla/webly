@@ -75,6 +75,16 @@
     background-clip: padding-box;
 }
 
+#Projects section a::before{
+    content: "open project";
+    color: rgb(240, 201, 255);
+    font-size: 0.5em;
+    padding-right: 0.2em;
+    font-family: 'Exo 2', sans-serif;
+    font-variant: small-caps;
+    font-weight: 900;
+}
+
 #Projects section a:hover{
     border-color: coral;
 }
@@ -91,5 +101,10 @@
     #Projects section:hover > h6{
         margin: 0em 5em;
         transition: margin 1s;
+    }
+
+    #Projects section a{
+        display: inline-block;
+        border-color: coral;
     }
 }
