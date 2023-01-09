@@ -82,7 +82,7 @@ function ChangeInfo(response){
         id = setInterval(()=>{
             temp = new Date()
                 S = Math.floor((temp - globalTime - buffer)/1000)
-                Info.textContent = S%60 + "secs ::" + parseInt(S/60) + "mins"
+                Info.textContent = S%60 + " secs :: " + parseInt(S/60) + " mins"
         }, 100)
 
     else if(response == 1)

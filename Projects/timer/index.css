@@ -7,7 +7,10 @@
 }
 
 body{
-    background-color: rgb(81, 80, 85);
+    background-color: rgb(19, 2, 88);
+    background-image: url("./_clock.svg");
+    background-repeat: space;
+    background-size: 3%;
     overflow: hidden;
 }
 
@@ -33,21 +36,24 @@ button{
     position: relative;
     height: fit-content;
     width: fit-content;
-    padding: 0.2vmax;
+    padding: 0.2em;
     text-align: center;
     background-color: transparent;
-    border: 0.2vmax solid rgb(192, 129, 124);
-    border-radius: 0.3vmax;
+    border: 0.1em dotted rgb(192, 129, 124);
     font: 2vmax 'Pacifico', cursive;
     color: rgb(140, 170, 240);
+    background-color: rgb(19, 2, 88);
 }
 
 button:hover{
-    background-color: rgb(57, 57, 57);
+    background-color: rgb(192, 129, 124);
+    color: rgb(4, 4, 4);
+    transition: scale 200ms;
 }
 
 button:active{
-    scale: 0.9;
+    color: rgb(254, 212, 212);
+    scale: 0.8;
 }
 
 #info{
@@ -56,13 +62,14 @@ button:active{
     right: 0%;
     height: fit-content;
     width: fit-content;
-    padding: 0.2vmax;
+    padding: 1em;
     text-align: center;
-    background-color: rgb(57, 57, 57);
-    border: 0.2vmax solid rgb(140, 170, 240);
-    border-radius: 0.4vmax;
+    background-color: rgb(227, 129, 129);
     font: 2vmax 'Pacifico', cursive;
-    color: rgb(211, 220, 162);
+    color: rgb(15, 3, 95);
+    outline: 0.3em dotted rgb(255, 255, 255);
+    outline-offset: -0.15em;
+    margin: 0.15em;
 }
 
 @keyframes secondsRotate {
