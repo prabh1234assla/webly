@@ -3,6 +3,7 @@
     font-family: monospace;
     user-select: none;
     display: none;
+    padding-bottom: 4em;
 }
 
 #Projects section{
