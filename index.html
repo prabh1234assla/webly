@@ -16,86 +16,87 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
     <script defer src="./index.js" type="text/javascript"></script>
+    <script defer src="./intersectionObserver.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="main">
-        <nav class="navBar">
-            <ul>
-                <li class="button" id="home">Home</li>
-                <li class="button" id="bio">Bio</li>
-                <li class="button" id="contacts">Contacts</li>
-                <li class="button" id="experience">Experience</li>
-                <li class="button" id="projects">Projects</li>
-                <li class="button" id="licensesAndCertifications">Licenses and Certifications</li> 
+        <nav class="navBar hidden">
+            <ul class="hidden">
+                <li class="button hidden" id="home">Home</li>
+                <li class="button hidden" id="bio">Bio</li>
+                <li class="button hidden" id="contacts">Contacts</li>
+                <li class="button hidden" id="experience">Experience</li>
+                <li class="button hidden" id="projects">Projects</li>
+                <li class="button hidden" id="licensesAndCertifications">Licenses and Certifications</li> 
             </ul>
         </nav>
-        <div class="skullLogo"></div>
-        <div class="content" id="content">
+        <div class="skullLogo hidden"></div>
+        <div class="content hidden" id="content">
             <section id="Bio">
-                <header>
-                    <img src="./icons/passport.jpeg" />
-                    <h1>PRABHDEEP SINGH ASSLA</h1>
-                    <h2>CSE UG student at NIT SRINAGAR</h2>
-                    <h4>⁍ full stack web developer</h4>
-                    <h4>⁍ CP enthusiast and graphic designer</h4>
-                    <h4>⁍ talks about web designing, frontend and backend technologies</h4>
+                <header class="hidden">
+                    <img class="hidden" src="./icons/passport.jpeg" />
+                    <h1 class="hidden" >PRABHDEEP SINGH ASSLA</h1>
+                    <h2 class="hidden" >CSE UG student at NIT SRINAGAR</h2>
+                    <h4 class="hidden" >⁍ full stack web developer</h4>
+                    <h4 class="hidden" >⁍ CP enthusiast and graphic designer</h4>
+                    <h4 class="hidden" >⁍ talks about web designing, frontend and backend technologies</h4>
                 </header>
                     <article id="BioContent">
 
-                        <h1>about me :</h1>
-                        <article>
-                            <img src="./icons/ariesLOGO.svg" />
-                            I Prabhdeep Singh am a student at National Institute of Technology, Srinagar. I am currently pursuing my B.TECH. degree in the domain of Computer Science and will be graduating by the end of the year 2025. Right now, I am in 4th Semester. I am a web developer. I love frontend technologies and web design tools and frameworks.
+                        <h1 class="hidden" >about me :</h1>
+                        <article class="hidden" >
+                            <img class="hidden" src="./icons/ariesLOGO.svg" />
+                            <p class="hidden" >I Prabhdeep Singh am a student at National Institute of Technology, Srinagar. I am currently pursuing my B.TECH. degree in the domain of Computer Science and will be graduating by the end of the year 2025. Right now, I am in 4th Semester. I am a web developer. I love frontend technologies and web design tools and frameworks.</p>
                         </article>
 
-                        <h1>alma mater :</h1>
-                        <article>
-                            <img src="./icons/taurusLOGO.svg" />
-                            I gained my high-school-diploma from St. Antony's Convent School, an institution located in the district Samba of my home state Jammu. For my higher-secondary-school-diploma I attended SP Smart School in the district Sarore of my home state Jammu.
+                        <h1 class="hidden" >alma mater :</h1>
+                        <article class="hidden" >
+                            <img class="hidden" src="./icons/taurusLOGO.svg" />
+                            <p class="hidden" >I gained my high-school-diploma from St. Antony's Convent School, an institution located in the district Samba of my home state Jammu. For my higher-secondary-school-diploma I attended SP Smart School in the district Sarore of my home state Jammu.</p>
                         </article>
 
-                        <h1>skills :</h1>
-                        <article>
-                            <img src="./icons/geminiLOGO.svg" />
-                            <ul>
-                                <li>HTML, CSS and JavaScript</li>
-                                <li>MERN Stack</li>
-                                <li>Js libraries like Anime.js, SVG.js and Jquery.js</li>
-                                <li>CSS frameworks like React BootStrap</li>
-                                <li>Material UI</li>
-                                <li>Rest APIs and Postman</li>
-                                <li>Git and Github</li>
-                                <li>DSA</li>
-                                <li>Graphic and Logo designing tools like Canva, Figma and InkScape</li>
-                                <li>Content Writing and Blogging</li>
-                                <li>SQL</li>
-                                <li>C and C++</li>
+                        <h1 class="hidden" >skills :</h1>
+                        <article class="hidden">
+                            <img class="hidden" src="./icons/geminiLOGO.svg" />
+                            <ul class="hidden">
+                                <li class="hidden" >HTML, CSS and JavaScript</li>
+                                <li class="hidden" >MERN Stack</li>
+                                <li class="hidden" >Js libraries like Anime.js, SVG.js and Jquery.js</li>
+                                <li class="hidden" >CSS frameworks like React BootStrap</li>
+                                <li class="hidden" >Material UI</li>
+                                <li class="hidden" >Rest APIs and Postman</li>
+                                <li class="hidden" >Git and Github</li>
+                                <li class="hidden" >DSA</li>
+                                <li class="hidden" >Graphic and Logo designing tools like Canva, Figma and InkScape</li>
+                                <li class="hidden" >Content Writing and Blogging</li>
+                                <li class="hidden" >SQL</li>
+                                <li class="hidden" >C and C++</li>
                             </ul>
                         </article>
 
-                        <h1>Hobbies :</h1>
-                        <article>
-                            <img src="./icons/cancerLOGO.svg" />
-                            <ul>
-                                <li>reading and writing blogs</li>
-                                <li>poetry writing</li>
-                                <li>photography</li>
-                                <li>painting</li>
-                                <li>playing badminton</li>
-                                <li>cycling</li>
-                                <li>graphic designing and logo making</li>
-                                <li>cooking food</li>
+                        <h1 class="hidden" >Hobbies :</h1>
+                        <article class="hidden" >
+                            <img class="hidden" src="./icons/cancerLOGO.svg" />
+                            <ul class="hidden">
+                                <li class="hidden" >reading and writing blogs</li>
+                                <li class="hidden" >poetry writing</li>
+                                <li class="hidden" >photography</li>
+                                <li class="hidden" >painting</li>
+                                <li class="hidden" >playing badminton</li>
+                                <li class="hidden" >cycling</li>
+                                <li class="hidden" >graphic designing and logo making</li>
+                                <li class="hidden" >cooking food</li>
                             </ul>
                         </article>
 
-                        <h1>Languages Known :</h1>
-                        <article>
-                            <img src="./icons/leoLOGO.svg" />
-                            <ul>
-                                <li>Hindi [native proficiency]</li>
-                                <li>English [professional working proficiency]</li>
-                                <li>Dogri [elementary proficiency]</li>
-                                <li>Punjabi [elementary proficiency]</li>
+                        <h1 class="hidden" >Languages Known :</h1>
+                        <article class="hidden" >
+                            <img class="hidden" src="./icons/leoLOGO.svg" />
+                            <ul class="hidden">
+                                <li class="hidden" >Hindi [native proficiency]</li>
+                                <li class="hidden" >English [professional working proficiency]</li>
+                                <li class="hidden" >Dogri [elementary proficiency]</li>
+                                <li class="hidden" >Punjabi [elementary proficiency]</li>
                             </ul>
                         </article>
 
@@ -103,75 +104,75 @@
             </section>
 
             <section id="Contacts">
-                <h1>prabhdeepsinghassla1234@gmail.com</h1>
-                <h3>+91-9541345422</h3>
-                <span id="address">
-                        <span><span id="bar">|</span> Trikuta Nagar, Jammu <span id="bar">|</span></span>
-                        <span><span id="bar">|</span> 181141 <span id="bar">|</span></span>
-                        <span><span id="bar">|</span> Jammu and Kashmir <span id="bar">|</span></span>
+                <h1 class="hidden" >prabhdeepsinghassla1234@gmail.com</h1>
+                <h3 class="hidden" >+91-9541345422</h3>
+                <span class="hidden" id="address">
+                        <span class="hidden" ><span class="hidden" id="bar">|</span> Trikuta Nagar, Jammu <span class="hidden" id="bar">|</span></span>
+                        <span class="hidden" ><span class="hidden" id="bar">|</span> 181141 <span class="hidden" id="bar">|</span></span>
+                        <span class="hidden" ><span class="hidden" id="bar">|</span> Jammu and Kashmir <span class="hidden" id="bar">|</span></span>
                 </span>
-                <ul>
-                    <li><img src="./icons2/linkedIn.webp" /><a href="https://www.linkedin.com/in/prabhdeep-singh-87536a223/" >linkedIn</a></li>
-                    <li><img src="./icons2/medium.png" /><a href="https://medium.com/@trustworthy1209" >medium</a></li>
-                    <li><img src="./icons2/github.png" /><a href="https://github.com/prabh-assla?tab=repositories" >github</a></li>
-                    <li><img src="./icons2/instagram.webp" /><a href="https://www.instagram.com/pd_assla/" >instagram</a></li>
-                    <li><img src="./icons2/codepen.png" /><a href="https://codepen.io/penASSLA" >codepen</a></li>
-                    <li><img src="./icons2/twitter.svg" /><a href="https://twitter.com/pdsinghassla" >twitter</a></li>
-                    <li><img src="./icons2/reddit.svg" /><a href="https://www.reddit.com/user/prabh_KARMA" >reddit</a></li>
+                <ul class="hidden">
+                    <li class="hidden" ><img class="hidden" src="./icons2/linkedIn.webp" /><a class="hidden" href="https://www.linkedin.com/in/prabhdeep-singh-87536a223/" >linkedIn</a></li>
+                    <li class="hidden" ><img class="hidden" src="./icons2/medium.png" /><a class="hidden" href="https://medium.com/@trustworthy1209" >medium</a></li>
+                    <li class="hidden" ><img class="hidden" src="./icons2/github.png" /><a class="hidden" href="https://github.com/prabh-assla?tab=repositories" >github</a></li>
+                    <li class="hidden" ><img class="hidden" src="./icons2/instagram.webp" /><a class="hidden" href="https://www.instagram.com/pd_assla/" >instagram</a></li>
+                    <li class="hidden" ><img class="hidden" src="./icons2/codepen.png" /><a class="hidden" href="https://codepen.io/penASSLA" >codepen</a></li>
+                    <li class="hidden" ><img class="hidden" src="./icons2/twitter.svg" /><a class="hidden" href="https://twitter.com/pdsinghassla" >twitter</a></li>
+                    <li class="hidden" ><img class="hidden" src="./icons2/reddit.svg" /><a class="hidden" href="https://www.reddit.com/user/prabh_KARMA" >reddit</a></li>
                 </ul>
             </section>
 
             <section id="Experience">
-                <h1 style="font-size: 3em; color: orange; font-family: 'Exo 2', sans-serif; margin: 0.1em;">Experience :</h1>
-                <section id="Industry" >
-                    <section id="position1">
-                        <img src="./icons3/ionic.png" />
-                        <h1 class="position">
+                <h1 class="hidden" style="font-size: 3em; color: orange; font-family: 'Exo 2', sans-serif; margin: 0.1em;">Experience :</h1>
+                <section class="hidden" id="Industry" >
+                    <section class="hidden" id="position1">
+                        <img class="hidden" src="./icons3/ionic.png" />
+                        <h1 class="hidden" class="position">
                             Developer Advocate
                         </h1>
-                        <h5 class="company">
+                        <h5 class="company hidden">
                             Ionic
                         </h5>
-                        <h5 class="duration">
+                        <h5 class="duration hidden">
                             August, 2022 - present || 4 months
                         </h5>
                     </section>
 
-                    <section id="position2">
-                        <img src="./icons3/replay.jpg" />
-                        <h1 class="position">
+                    <section class="hidden" id="position2">
+                        <img class="hidden" src="./icons3/replay.jpg" />
+                        <h1 class="position hidden">
                             Community Lead
                         </h1>
-                        <h5 class="company">
+                        <h5 class="company hidden">
                             Replay.io
                         </h5>
-                        <h5 class="duration">
+                        <h5 class="duration hidden">
                             January, 2022 - August, 2022 || 8 months
                         </h5>
                     </section>
 
-                    <section id="position3">
-                        <img src="./icons3/cypress.jpg" />
-                        <h1 class="position">
+                    <section class="hidden" id="position3">
+                        <img class="hidden" src="./icons3/cypress.jpg" />
+                        <h1 class="position hidden">
                             Technical Account Manager
                         </h1>
-                        <h5 class="company">
+                        <h5 class="company hidden">
                             Cypress.io
                         </h5>
-                        <h5 class="duration">
+                        <h5 class="duration hidden">
                             December, 2020 - December, 2021 || 1 year 1 month
                         </h5>
                     </section>
 
-                    <section id="position4">
-                        <img src="./icons3/fusionetics.webp" />
-                        <h1 class="position">
+                    <section class="hidden" id="position4">
+                        <img class="hidden" src="./icons3/fusionetics.webp" />
+                        <h1 class="position hidden">
                             Junior Software Developer
                         </h1>
-                        <h5 class="company">
+                        <h5 class="company hidden">
                             Fushionetics
                         </h5>
-                        <h5 class="duration">
+                        <h5 class="duration hidden">
                             July, 2019 - January, 2020 || 7 months
                         </h5>
                     </section>
@@ -180,92 +181,92 @@
             </section>
 
             <section id="Projects" >
-                <section id="project1">
-                    <h1>Ascii To Char Converter</h1>
-                    <h5>Project made using HTML, CSS, JS, SVGs and InkScape that converts the ascii values to corresponding character values.</h5>
-                    <h6>mentored by: self</h6>
-                    <a href="./Projects/asciiTochar/asciiToCharacter.html">♈</a>
+                <section class="hidden" id="project1">
+                    <h1 class="hidden" >Ascii To Char Converter</h1>
+                    <h5 class="hidden" >Project made using HTML, CSS, JS, SVGs and InkScape that converts the ascii values to corresponding character values.</h5>
+                    <h6 class="hidden" >mentored by: self</h6>
+                    <a class="hidden" href="./Projects/asciiTochar/asciiToCharacter.html">♈</a>
                 </section>
 
-                <section id="project2">
-                    <h1>BrainF**k Interpretor</h1>
-                    <h5>Interpretor for BrainF**k Code written using JavaScript. I used HTML, CSS, JS, SVGs and InkScape to make this project.</h5>
-                    <h6>mentored by: self</h6>
-                    <a href="Projects/BrainF/index.html">♉</a>
+                <section class="hidden" id="project2">
+                    <h1 class="hidden" >BrainF**k Interpretor</h1>
+                    <h5 class="hidden" >Interpretor for BrainF**k Code written using JavaScript. I used HTML, CSS, JS, SVGs and InkScape to make this project.</h5>
+                    <h6 class="hidden" >mentored by: self</h6>
+                    <a class="hidden" href="Projects/BrainF/index.html">♉</a>
                 </section>
 
-                <section id="project3">
-                    <h1>Temperature Converter</h1>
-                    <h5>Project that converts Temperature between three scales namely Celsius, Farenheit and Kelvin and is made by using HTML, CSS, JS, SVGs and InkScape.</h5>
-                    <h6>mentored by: self</h6>
-                    <a href="Projects/tempConverter/temperatureConverter.html">♊</a>
+                <section class="hidden" id="project3">
+                    <h1 class="hidden" >Temperature Converter</h1>
+                    <h5 class="hidden" >Project that converts Temperature between three scales namely Celsius, Farenheit and Kelvin and is made by using HTML, CSS, JS, SVGs and InkScape.</h5>
+                    <h6 class="hidden" >mentored by: self</h6>
+                    <a class="hidden" href="Projects/tempConverter/temperatureConverter.html">♊</a>
                 </section>
 
-                <section id="project4">
-                    <h1>Frequency of Character in String Calculator</h1>
-                    <h5>This project counts the frequency of a particular character within a string given as input and displays its count. It has been made using HTML, CSS, JS, SVGs and InkScape.</h5>
-                    <h6>mentored by: self</h6>
-                    <a href="Projects/charFrequency/characterFrequency.html">♋</a>
+                <section class="hidden" id="project4">
+                    <h1 class="hidden" >Frequency of Character in String Calculator</h1>
+                    <h5 class="hidden" >This project counts the frequency of a particular character within a string given as input and displays its count. It has been made using HTML, CSS, JS, SVGs and InkScape.</h5>
+                    <h6 class="hidden" >mentored by: self</h6>
+                    <a class="hidden" href="Projects/charFrequency/characterFrequency.html">♋</a>
                 </section>
 
-                <section id="project5">
-                    <h1>Analog and Digital Stop Watch</h1>
-                    <h5>Stop Watch made using HTML, CSS and JS. For creating the analog clock I used SVGs and designed them using InkScape. It displays the digital countdown as well as a clock with rotating hands that show time that has elapsed.</h5>
-                    <h6>mentored by: self</h6>
-                    <a href="Projects/timer/index.html">♌</a>
+                <section class="hidden" id="project5">
+                    <h1 class="hidden" >Analog and Digital Stop Watch</h1>
+                    <h5 class="hidden" >Stop Watch made using HTML, CSS and JS. For creating the analog clock I used SVGs and designed them using InkScape. It displays the digital countdown as well as a clock with rotating hands that show time that has elapsed.</h5>
+                    <h6 class="hidden" >mentored by: self</h6>
+                    <a class="hidden" href="Projects/timer/index.html">♌</a>
                 </section>
 
-                <section id="project6">
-                    <h1>Logo Displayer</h1>
-                    <h5>Project that showcases few of my logos that I have created using Figma and InkScape. The project uses CSS, HTML and JS to generate 3d effects.</h5>
-                    <h6>mentored by: self</h6>
-                    <a href="Projects/logosDisplayer/index.html">♍</a>
+                <section class="hidden" id="project6">
+                    <h1 class="hidden" >Logo Displayer</h1>
+                    <h5 class="hidden" >Project that showcases few of my logos that I have created using Figma and InkScape. The project uses CSS, HTML and JS to generate 3d effects.</h5>
+                    <h6 class="hidden" >mentored by: self</h6>
+                    <a class="hidden" href="Projects/logosDisplayer/index.html">♍</a>
                 </section>
 
-                <section id="project7">
-                    <h1>Graphing Calculator</h1>
-                    <h5>Graphing Calculator that can generate graphs for different mathematical functions like sin, cos, floor, etc. Technologies I have used to create this project are : HTML, CSS, JS, Figma and InkScape.</h5>
-                    <h6>mentored by: self</h6>
-                    <a href="Projects/graphingCalculator/index.html">♎</a>
+                <section class="hidden" id="project7">
+                    <h1 class="hidden" >Graphing Calculator</h1>
+                    <h5 class="hidden" >Graphing Calculator that can generate graphs for different mathematical functions like sin, cos, floor, etc. Technologies I have used to create this project are : HTML, CSS, JS, Figma and InkScape.</h5>
+                    <h6 class="hidden" >mentored by: self</h6>
+                    <a class="hidden" href="Projects/graphingCalculator/index.html">♎</a>
                 </section>
 <!-- ♐♑ -->
             </section>
 
             <section id="LicensesAndCertifications" >
-                <section>
-                    <img src="./icons1/SoloLearn.webp" />
-                    <h1>React + Redux</h1>
-                    <h4>SoloLearn</h4>
-                    <h4>Issued: September, 2022 || no expiration date</h4>
-                    <h6>Credential Id: 12eaf0113c29822a</h6>
+                <section class="hidden">
+                    <img class="hidden" src="./icons1/SoloLearn.webp" />
+                    <h1 class="hidden" >React + Redux</h1>
+                    <h4 class="hidden" >SoloLearn</h4>
+                    <h4 class="hidden" >Issued: September, 2022 || no expiration date</h4>
+                    <h6 class="hidden" >Credential Id: 12eaf0113c29822a</h6>
                 </section>
 
-                <section>
-                    <img src="./icons1/perfectElearning.jpg" />
-                    <h1>Full Stack Web Development</h1>
-                    <h4>Perfect eLearning</h4>
-                    <h4>Issued: September, 2021 || no expiration date</h4>
-                    <h6>Credential Id: U80301HR2021PTC093214</h6>
+                <section class="hidden">
+                    <img class="hidden" src="./icons1/perfectElearning.jpg" />
+                    <h1 class="hidden" >Full Stack Web Development</h1>
+                    <h4 class="hidden" >Perfect eLearning</h4>
+                    <h4 class="hidden" >Issued: September, 2021 || no expiration date</h4>
+                    <h6 class="hidden" >Credential Id: U80301HR2021PTC093214</h6>
                 </section>
 
-                <section>
-                    <img src="./icons1/codeAcademy.avif" />
-                    <h1>Tailwind CSS and BootStrap Master Course</h1>
-                    <h4>Codeacademy</h4>
-                    <h4>Issued: December, 2019 || no expiration date</h4>
-                    <h6>Credential Id: 878ae3022fcae77</h6>
+                <section class="hidden">
+                    <img class="hidden" src="./icons1/codeAcademy.avif" />
+                    <h1 class="hidden" >Tailwind CSS and BootStrap Master Course</h1>
+                    <h4 class="hidden" >Codeacademy</h4>
+                    <h4 class="hidden" >Issued: December, 2019 || no expiration date</h4>
+                    <h6 class="hidden" >Credential Id: 878ae3022fcae77</h6>
                 </section>
 
-                <section>
-                    <img src="./icons1/Udemy.png" />
-                    <h1>PostMan API Testing for Beginners</h1>
-                    <h4>Udemy</h4>
-                    <h4>Issued: October, 2020 || no expiration date</h4>
-                    <h6>Credential Id: 981euabb56ua80o19</h6>
+                <section class="hidden">
+                    <img class="hidden" src="./icons1/Udemy.png" />
+                    <h1 class="hidden" >PostMan API Testing for Beginners</h1>
+                    <h4 class="hidden" >Udemy</h4>
+                    <h4 class="hidden" >Issued: October, 2020 || no expiration date</h4>
+                    <h6 class="hidden" >Credential Id: 981euabb56ua80o19</h6>
                 </section>
             </section>
         </div>
-        <div class="rotatum" id="rotatum"></div>
+        <div class="rotatum hidden" id="rotatum"></div>
     </div>
 </body>
 </html>
