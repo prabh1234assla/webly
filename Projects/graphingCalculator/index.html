@@ -13,9 +13,8 @@
         <link href="./MenuStyling.css" rel="stylesheet" type="text/css">
         <link href="./BackgroundAnimationForMenu.css" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script defer src="./Plotter.js" type="module"></script>
+        <script defer src="./Plotter.js" type="module" ></script>
         <script defer src="./DropDownListDealer.js" type="module"></script>  
-        <script defer src="./MenuDealer.js" type="module"></script>
 </head>
 
 <body>
@@ -35,7 +34,7 @@
         <div class="choices">
             <div class="fnOptions" style="z-index: 2;">
                 
-                <div class="box11" style="z-index: 1;">choose functions <span class="notation">a.f(bx)</span>{any empty field defaults to 0} ➱ </div>
+                <div class="box11" style="z-index: 1;"> function format ➱ <span class="notation">a.f(bx)</span> </div>
                 
                 <div class="box12" style="z-index: 4;">
                     <div class="select list1Heading" id="list1">trignometric ➱</div>
@@ -92,13 +91,15 @@
                 </div>
             
         </div>
-        
+ 
         <div class="CustomizingOptions" style="z-index: 1;">
-            <input class="input box21 a" placeholder="amplitude a(default: 10)"/>
-            <input class="input box22 b" placeholder="expanse b(default: 0.6)" value="0.6"/>
-            <input class="input box23 pointSize" placeholder="pointSize(default: 1)" value="1"/>
-            <input class="input box24 stepSize" placeholder="stepSize(default: 0.4)" value="0.4"/>
-            <input class="input box25 pointsNumber" placeholder="pointsNumber(default: 1350)" value="1350"/>
+            <input class="input box21 rangeMultiplier" placeholder="range multiplier"/>
+            <input class="input box22 domainMultiplier" placeholder="domain multiplier"/>
+            <input class="input box23 leftLapse" placeholder="left lapse"/>
+            <input class="input box24 stepSize" placeholder="step size"/>
+            <input class="input box25 pointSize" placeholder="pointSize"/>
+            <input class="input box26 pointsNumber" placeholder="points number"/>
+            <input class="input box27 iterationsPerChunk" placeholder="rendering speed"/>
         </div>
         
         <div class="submissionOptions">

@@ -57,12 +57,9 @@
     border-radius: 100vh;
 }
 
-.point{
-    margin-top: -1px;
-    position: relative;
-    border-radius: 50%;
+.point {
+    position: absolute;
     transition: top 6s linear 200ms, left 6s linear 200ms, height 6s linear 200ms, width 6s linear 200ms;
-    z-index: 1;
 }
 
 .message{

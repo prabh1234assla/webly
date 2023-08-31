@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 :root{
-    --font: bolder 1.5em 'Source Code Pro', monospace;
+    --font: bolder 1em 'Source Code Pro', monospace;
     --buttonHt: 5.8vh;
     --buttonWd: 19vw;
-    --buttonBorderRadius: 100vh;
+    --buttonBorderRadius: 0.5vh;
     --initialBorder: 0.5vh solid transparent;
 }
 
@@ -169,32 +169,39 @@
 /* positioning CustomizingOptions elements now ~ */
 
 .box21{
-    grid-column: 1/span 3;
-    grid-row: 3;
+    grid-column: 1/ span 2;
+    grid-row: 2;
 }
 
 .box22{
-    grid-column: 1/span 3;
-    grid-row: 4;
+    grid-column: 1/ span 2;
+    grid-row: 3;
 }
 
 .box23{
-    grid-column: 1;
-    grid-row: 5;
+    grid-column: 3;
+    grid-row: 2;
 }
 
 .box24{
-    grid-column: 2;
-    grid-row: 5;
+    grid-column: 3;
+    grid-row: 3;
 }
 
 .box25{
-    grid-column: 3;
-    grid-row: 5;
+    grid-column: 1;
+    grid-row: 4;
 }
 
+.box26{
+    grid-column: 2;
+    grid-row: 4;
+}
 
-
+.box27{
+    grid-column: 3;
+    grid-row: 4;
+}
 
 .submissionOptions{
     display: grid;
@@ -203,7 +210,6 @@
     place-items: stretch;
     place-content: center;
     column-gap: 1.5vw;
-
 }
 
 /* positioning submissionOptions elements now ~ */
@@ -355,8 +361,12 @@
     box-shadow: 0vh 0vh 0.5vh 0.5vh rgb(175, 108, 178);
 }
 
-.pointsNumber, .pointSize, .stepSize{
-    font-size: 2vh;
+/* styling notation class text */
+
+.notation{
+    font-style: italic;
+    font-size: 1.5em;
+    color: rgb(100, 27, 104);
 }
 
 /* media queries */
