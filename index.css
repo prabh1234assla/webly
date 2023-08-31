@@ -7,9 +7,9 @@ body{
     overflow: hidden;
     background-color: #914502;
     background-image: url("./icons/circlePattern.svg");
-    background-size: 10%;
+    background-size: 30%;
     background-position: 100% 50%;
-    background-repeat: space;
+    background-repeat: space no-repeat;
 }
 
 .main{

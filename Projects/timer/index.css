@@ -6,25 +6,32 @@
     user-select: none;
 }
 
-body{
+#container{
+    height: 250vh;
+    width: 100vw;
     background-color: rgb(19, 2, 88);
     background-image: url("./_clock.svg");
     background-repeat: space;
-    background-size: 3%;
-    overflow: hidden;
+    background-position: 50% 50%;
+    background-size: 90%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 14em;
+    align-items: center;
 }
 
 #clockSVG{
-    height: 35vmax;
-    width: 35vmax;
-    margin: 4vh auto;
+    height: 40em;
+    width: 40em;
+    margin: 10em auto;
 }
 
 #seconds, #minutes{
     transform-origin: 371.159px 372.303px;
 }
 
-.menu{
+#menu{
     position: fixed;
     height: fit-content;
     width: fit-content;
@@ -40,7 +47,7 @@ button{
     text-align: center;
     background-color: transparent;
     border: 0.1em dotted rgb(192, 129, 124);
-    font: 2vmax 'Pacifico', cursive;
+    font: 4em 'Pacifico', cursive;
     color: rgb(140, 170, 240);
     background-color: rgb(19, 2, 88);
 }
@@ -65,11 +72,34 @@ button:active{
     padding: 1em;
     text-align: center;
     background-color: rgb(227, 129, 129);
-    font: 2vmax 'Pacifico', cursive;
+    font: 4em 'Pacifico', cursive;
     color: rgb(15, 3, 95);
     outline: 0.3em dotted rgb(255, 255, 255);
     outline-offset: -0.15em;
-    margin: 0.15em;
+    margin: 0.15em 0.5em;
+}
+
+#scroll_table{
+    height: 80em;
+    overflow: scroll;
+}
+
+#lap{
+    width: 30em;
+    text-align: center;
+    font: 2em 'Pacifico', cursive;
+}
+
+#lap th{
+    color: rgb(246, 124, 124);
+    border: 0.1em solid rgb(253, 145, 145);
+    padding: 0.4em;
+}
+
+#lap td{
+    color: rgb(97, 78, 225);
+    border: 0.1em dotted rgb(97, 78, 225);
+    padding: 0.2em;
 }
 
 @keyframes secondsRotate {
@@ -81,5 +111,40 @@ button:active{
 @keyframes minutesRotate {
     to{
         rotate: 360deg;
+    }
+}
+
+@media (max-width: 659px) or (max-height: 806px) {
+    #clockSVG{
+        height: 20em;
+        width: 20em;
+    }
+
+    #lap{
+        width: 15em;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 1087px) or (max-height: 1206px) {
+    button, #info{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 815px) or (max-height: 1088px) {
+    button, #info{
+        font-size: 2em;
+    }
+
+    #lap{
+        width: 15em;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 428px) or (max-height: 926px) {
+    button, #info{
+        font-size: 1em;
     }
 }
